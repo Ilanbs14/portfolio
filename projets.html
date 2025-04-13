@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ilan Luis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="projet.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1> PORTFOLIO DE ILAN LUIS </h1>
+		<button class="menu-toggle" onclick="toggleMenu()">
+			<i class="fa fa-bars fa-2x"></i>
+		</button>	
+    </header>
+	
+	<main>
+		<section class="profil">
+			<img src="./Images-general/pdp.jpg">
+			<h1> Ilan LUIS </h1>
+			<div class="text-description">
+				<p> Etudiant en première année à l'IUT d'Orsay, je suis passionné par la programmation et le développement</p>
+			</div>
+			<hr>
+			<div class="titreContact">
+				<p>Coordonnées </p>
+			</div>
+			<div class="contacts">
+				<div class="info">
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blanck"> linkedin.com/in/ilan-luis</a>
+				</div>
+				<hr>
+				<div class="info">
+					<a href="https://github.com/Ilanbs14" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a href="https://github.com/Ilanbs14" target="_blanck"> github.com/Ilanbs14</a>
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-envelope"></i> luisilonald14@gmail.com
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-phone"></i>+33 (0)7 67 27 87 18
+				</div>
+			</div>
+			
+			<div class="voirCv">
+				<a href="./CV_Ilan_LUIS.pdf" target="_blank"> Voir mon CV </a>
+			</div>
+		</section>
+		
+		<section class="content">
+			<!-- Projet 1 --!>
+			<section class="projet-detail" id="projet-parc">
+				<div class="image-titre">
+					<img src="Images-projets/parc-attraction.png" alt="Projet 1">
+					<div class="bulle-titre">Site web parc d'attraction</div>
+					<div class="bulle-langages">
+						<img src="Images-general/html-5.png" alt="HTML">
+						<img src="Images-general/css-3.png" alt="CSS">
+					</div>
+				</div>
+
+				 <div class="description">
+					<div class="description-haut">
+						<div class="texteComplet">
+							<p>
+							<strong>Type de projet :</strong> Scolaire  
+							<strong>Langages :</strong> HTML/CSS
+							<strong> Outil(s)</strong> : Notepad++
+							<strong>Duo :</strong> Mohamed BEN TALEB
+							<br>
+							<strong>Objectif de ce projet :</strong> Réaliser un site web (fictif) d'un lieu consacré au divertissement en duo 
+							<br>
+							Nous avons donc avec mon binôme choisi de réaliser notre site web sur un parc d'attraction sur l'univers du célèbre manga/animé DRAGON BALL que nous apprécions particulièrement. Nous l'avons nommé Saiyan Land et avons arboré les couleurs de l'univers Dragon Ball sur tout le site avec du orange en couleur principale.
+							<br>
+							Ce site est composé de <strong>4</strong> pages : Accueil, Services, Tarifs et Map.
+							<br>
+							Toutes les pages sont composées d'une barre de navigation permettant de naviguer entre les différentes pages. On y retrouve également un bouton Réserver avec un formulaire de réservation (non fonctionnel).
+							<br>
+							Le footer, dont je suis le principal développeur, comporte une section réseaux sociaux et une autre avec des catégories qui ouvrent des pop-ups.
+							<br>
+							La page <strong>Accueil</strong> présente le parc avec texte, images, vidéos et informations de contact.
+							<br>
+							La page <strong>Activité</strong> (ma page) montre les attractions avec du texte, des images, des tableaux et une animation au survol.
+							<br>
+							La page <strong>Tarifs</strong> affiche des forfaits sous forme de tableaux stylisés.
+							<br>
+							La page <strong>Map</strong> permet de localiser le parc via un bouton "Visitez-nous".
+							<br>
+							<strong>Note du projet :</strong> 16/20
+							</p>
+						</div>
+						
+						<a href="https://ilanbs14.github.io/parc-attraction-web/" target="_blank" class="btn-action">Voir le site</a>
+					</div>
+
+					<div class="bas-description">
+						<button class="voir-plus-btn">
+						Afficher plus <span class="fleche">▼</span>
+						</button>
+						<div class="date-projet">Décembre 2024</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="projet-detail" id="projet-banque">
+				<div class="image-titre">
+					<img src="Images-projets/bdd-banque.png" alt="Projet 1">
+					<div class="bulle-titre">Base de données d'une banque</div>
+					<div class="bulle-langages">
+						<img src="Images-general/sql.png" alt="SQL">
+					</div>
+				</div>
+
+				 <div class="description">
+					<div class="description-haut">
+						<div class="texteComplet">
+							<p>
+							<strong>Type de projet :</strong> Scolaire  
+							<strong>Langages :</strong> SQL
+							<strong>Outil(s) :</strong> DB browser (SQLITE), Looping et Mocodo
+							<strong>Duo :</strong> Abdelmoumen HANNACHI
+							<br>
+							<strong>Objectif de ce projet :</strong> En partant d'un besoin exprimé par un client, étudier puis réaliser une base de données portant sur une partie du système d'information à développer.
+							<br>
+							Nous avons décidé de créer une base de données sur une banque et plus particulièrement sur le fonctionnement de la base de données des banques Crédit Agricole.
+							<br>
+							Pour cela, nous avons commencé par réaliser le Modèle Conceptuel de Données (MCD) puis le Schéma Relationnel (SR) .A partir de ces deux représentations, nous avons pu réaliser le dictionnaire des données.
+							<br>
+							Ensuite, nous avons débuter la création des tables en SQL : Ville, Agence, Type_CB, Type_Compte, Type_Transaction, Compte, Carte_Bancaire, Client et Transactions
+							<br>
+							Ensuite, nous avons inséré plusieurs données fictives dans la base de données pour chaque table (25 clients, 70 transactions...)
+							<br>
+							Pour finir, nous avons réaliser des requêtes (20 au total) afin d'intérroger la table et de renvoyer d'éventuelles données que des employés ou des clients de la banque auraient pu utiliser.
+							<br>
+							<strong>Note du projet :</strong> 15/20
+							</p>
+						</div>
+						
+						<a href="https://github.com/Ilanbs14/BDD-Banque" target="_blank" class="btn-action">Voir le SQL</a>
+					</div>
+
+					<div class="bas-description">
+						<button class="voir-plus-btn">
+						Afficher plus <span class="fleche">▼</span>
+						</button>
+						<div class="date-projet">Novembre 2024</div>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<section class="barre-nav">
+			<div class="nav-pages">
+				<ul>
+					<li>
+						<a href="./index.html">
+							<i class="fa-solid fa-home fa-2x" ></i>
+							<p>Accueil</p>
+						</a>
+					</li>
+					<li>
+						<a href="./projets.html" class="pageActuelle">
+							<i class="fa-solid fa-folder fa-2x" aria-hidden="true"></i>
+							<p>Projets</p>
+						</a>
+					</li>
+					<li>
+						<a href="./a-propos.html">
+							<i class="fa fa-user fa-2x" aria-hidden="true"></i>
+							<p> A propos </p>
+						</a>
+					<li>
+						<a href="./competences.html">
+							<i class="fa-solid fa-code fa-2x" aria-hidden="true"></i>
+							<p>Compétences</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<script src="./javascript/adapt-text.js"></script>
+	<script src="./javascript/voir-plus-btn.js"></script>
+	<script src="./javascript/toogle-menu.js"></script>
+</body>
+<footer>
+	<div class="footer-simple">
+		<p>&copy; 2025 Ilan Luis — Portfolio personnel</p>
+		<p class="footer-date">Dernière mise à jour : 14 avril 2025</p>
+	</div>
+</footer>
+
+</html>

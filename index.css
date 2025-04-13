@@ -1,0 +1,129 @@
+.annonces {
+	background-color : #eae5e5;
+	border-radius : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 10px;
+	border : 2px dashed black;
+	margin-bottom : 4px;
+}
+
+.annonces p {
+	text-align : center;
+	margin-top : 20px;
+}
+
+.themeAnnonce {
+	font-size : 14px;
+	color : black;
+	background-color : #ff2929;
+	display : inline-block;
+	padding : 4px;
+	border-radius : 8px;
+	margin-left : 3px;
+	border : 1px solid black;
+}
+
+.projets {
+	border-radius : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	margin-bottom : 4px;
+}
+	
+.liste-projets {
+	display: flex;
+	align-items : center;
+	justify-content: center;
+	gap: 40px; 
+	flex-wrap: wrap;
+	margin-top: 40px;
+	margin-bottom : 40px;
+}
+
+.projet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 180px;
+	padding: 10px;
+	border : 1px solid black;
+	border-radius: 10px;
+	background-color: #96989c;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	transition: transform 0.2s;
+}
+
+.projet:hover {
+	transform: scale(1.05);
+}
+
+.projet img {
+	width: 180px;
+	height: 160px;
+	object-fit: cover;
+	border-radius: 8px;
+	border : 1px solid black;
+}
+
+.projet p {
+	margin : 3px;
+}
+
+.texteAdapte {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 150px;
+}	
+
+.titreProjet {
+	font-weight : bold;
+}
+
+
+.voirPlus:hover {
+  transform: scale(1.1);
+}
+
+.cerclePlus {
+	width: 120px;
+	height: 120px;
+	background-color: #96989c;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin : auto;
+	border : 1px solid black;
+}
+
+.cerclePlus i {
+  color: #000;
+}
+
+.lien-projet {
+  text-decoration: none;
+}
+
+.infosProjet {
+  font-size: 12px;
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+  border: 1px solid #555;
+}
+
+.infosProjet td {
+  padding: 4px 6px;
+  border: 1px solid #555;
+}
+
+/* Couleur alternée une ligne sur deux */
+.infosProjet tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.infosProjet tr:nth-child(odd) {
+  background-color: #ffffff;
+}

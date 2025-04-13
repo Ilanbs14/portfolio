@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	background : #b3e9fe;
+}
+
+header h1 {
+	text-align : left;
+	margin-left : 3rem;
+	margin-top : 2rem;
+	margin-bottom : 3rem;
+}
+
+
+main {
+	display: grid;
+    grid-template-columns: 22% 62% 10%;
+    margin: 0 50px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------Côté gauche--------------------------------------*/
+.profil {
+	position : sticky;
+	left :0;
+	border : 2px solid;
+	position : relative;
+	padding : 15px;
+	background : white;
+	text-align : center;
+	background : #cbcfff;
+	max-width : 300px;
+	border-radius : 20px;
+}
+
+.profil img {
+	width : 7rem;
+	border : 2px solid #6495ED;
+	border-radius : 50%;
+	transform : 0.1s;
+}
+
+.profil img:hover {
+	transform : scale(1.15);
+	box-shadow : 0 0 10px #6495ED;
+}
+
+.text-description {
+	background : #ededef;
+	padding-top : 1px;
+	padding-bottom : 1px;
+	padding-left : 8px;
+	padding-right : 8px;
+	border-radius : 10px;
+	border: 1px solid #1684af;
+	font-size : 14.5px;
+}
+
+.titreContact p{
+	line-height : 1px;
+	font-weight : bold;
+}
+
+.profil hr {
+	border-top : 2px solid black;
+}
+
+.contacts {
+	background: #ededef;
+	padding : 10px;
+	border-radius:10px;
+	border: 1px solid #1684af;
+}
+
+.contacts hr {
+	height : 1px;
+	border-top : 1px dashed black;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: auto 1fr;
+    align-items: left;
+    gap: 14px;
+	font-size:15px;
+	text-align : left;
+}
+
+.info i {
+	font-size : 22px;
+	color : #1684af;
+}
+
+.info a {
+	text-decoration : none;
+	color: black;
+}
+
+.voirCv a{
+	margin-top : 15px;
+	background-color : #6495ED;
+	padding : 10px;
+	border-radius : 8px;
+	display : inline-block;
+	text-decoration : none;
+	color : black;
+	font-size : 18px;
+	border : 1px solid black;
+}
+
+.voirCv a:hover {
+	transform : scale(1.1,1.1);
+	background-color: #17428f;
+	border : 2px solid black;
+}
+
+/*------------------------------------------Milieu----------------------------------*/
+	
+.content {
+	position : sticky;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 20px;
+	background : #cbcfff;
+	border : 2px solid black;
+	border-radius : 20px;
+    scrollbar-width: none; /* Masquer la scrollbar (Firefox) */
+    -ms-overflow-style: none; /* Masquer la scrollbar (IE/Edge) */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* Masquer la scrollbar (Chrome, Safari) */
+}
+
+.content hr {
+	border-top : 3px solid #1a4498;
+	margin-bottom : 15px;
+}
+
+.titreContent p { /* Style des titres présents sur la page principale d'accueil */
+	font-size : 35px;
+	line-height : 5px;
+	font-weight : bold;
+}
+
+/*----------Barre de navigation horizontale---------*/
+.barre-nav {
+    position: sticky;
+    top: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 90%;
+    padding: 15px 0;
+    background: #cbcfff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-pages ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-pages p {
+	font-size : 13px;
+}
+
+.nav-pages li {
+	margin-bottom : 10px;
+}
+
+.nav-pages ul li a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 90px;
+	background-color: #6495ED;
+	padding-top:4px;
+	color: black;
+	text-decoration: none;
+	border-radius: 8px;
+	box-sizing: border-box;
+	line-height:1px;
+}
+
+.nav-pages ul li .pageActuelle {
+	background-color : black;
+	color : white;
+}
+
+.nav-pages ul li a:hover {
+	background-color: black;
+	border-color:#696969 #DCDCDC #DCDCDC #696969;
+	color : white;
+}
+
+footer {
+	background-color: #1e1e1e;
+	color: #ddd;
+	text-align: center;
+	padding: 1.5em 0;
+	margin-top: 3em;
+	font-size: 0.9em;
+}
+
+.footer-simple p {
+	margin: 0.3em 0;
+}
+
+.footer-date {
+	font-size: 0.8em;
+	color: #888;
+}
+
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background-color: #6495ED;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* RESPONSIVE - Masquer la nav et afficher le bouton */
+@media screen and (max-width: 1150px) {
+    .barre-nav {
+        display: none;
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        width: 85px;
+        z-index: 999;
+        background-color: #cbcfff;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
+    .barre-nav.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    main {
+        grid-template-columns: 30% 65%;
+        margin: 0 20px;
+		justify-content : space-between;
+    }
+
+    .profil,
+	.content {
+        max-width: 100%;
+        height : auto;
+	}
+}
+
+@media screen and (max-width: 910px) {
+	main {
+		display : flex;
+		flex-direction : column;
+		gap : 20px;
+		align-items : center;
+	}
+	
+}

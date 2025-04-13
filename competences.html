@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ilan Luis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="competences.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1> PORTFOLIO DE ILAN LUIS </h1>
+		<button class="menu-toggle" onclick="toggleMenu()">
+			<i class="fa fa-bars fa-2x"></i>
+		</button>	
+    </header>
+	
+	<main>
+		<section class="profil">
+			<img src="./Images-general/pdp.jpg">
+			<h1> Ilan LUIS </h1>
+			<div class="text-description">
+				<p> Etudiant en première année à l'IUT d'Orsay, je suis passionné par la programmation et le développement</p>
+			</div>
+			<hr>
+			<div class="titreContact">
+				<p>Coordonnées </p>
+			</div>
+			<div class="contacts">
+				<div class="info">
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blanck"> linkedin.com/in/ilan-luis</a>
+				</div>
+				<hr>
+				<div class="info">
+					<a href="https://github.com/Ilanbs14" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a href="https://github.com/Ilanbs14" target="_blanck"> github.com/Ilanbs14</a>
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-envelope"></i> luisilonald14@gmail.com
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-phone"></i>+33 (0)7 67 27 87 18
+				</div>
+			</div>
+			
+			<div class="voirCv">
+				<a href="./CV_Ilan_LUIS.pdf" target="_blank"> Voir mon CV </a>
+			</div>
+		</section>
+		
+		<section class="content">
+			<div class="skills-section">
+				<div class="titreContent">
+					<p> Front-end </p>
+				</div>
+				<hr>
+				<div class="skills-grid">
+				  <div class="skill-bubble html maitrise"><img src="Images-general/html-5.png" alt="HTML"></div>
+				  <div class="skill-bubble css maitrise"><img src="Images-general/css-3.png" alt="CSS"></div>
+				  <div class="skill-bubble js a-apprendre"><img src="Images-general/js.png" alt="JS"></div>
+				</div>
+			  </div>
+
+			  <div class="skills-section">
+				<div class="titreContent">
+					<p> Back-end </p>
+				</div>
+				<hr>
+				<div class="skills-grid">
+				  <div class="skill-bubble python maitrise"><img src="Images-general/python.png" alt="Python"></div>
+				  <div class="skill-bubble cpp maitrise"><img src="Images-general/c++.png" alt="C++"></div>
+				  <div class="skill-bubble sql maitrise"><img src="Images-general/sql.png" alt="SQL"></div>
+				  <div class="skill-bubble java en-cours"><img src="Images-general/java.png" alt="Java"></div>
+				  <div class="skill-bubble csharp en-cours"><img src="Images-general/c-sharp.png" alt="C#"></div>
+				  
+				</div>
+			  </div>
+
+			  <div class="skills-section">
+				<div class="titreContent">
+					<p> Outils </p>
+				</div>
+				<hr>
+				<div class="skills-grid">
+				  <div class="skill-bubble maitrise"><img src="Images-general/codeblocks.png" alt="CodeBlocks"></div>
+				  <div class="skill-bubble maitrise"><img src="Images-general/eclipse.png" alt="Eclipse"></div>
+				  <div class="skill-bubble maitrise"><img src="Images-general/jupyter.png" alt="Jupyter Notebook"></div>
+				  <div class="skill-bubble en-cours"><img src="Images-general/git.png" alt="Git"></div>			  
+				  <div class="skill-bubble en-cours"><img src="Images-general/visualstudio.png" alt="Visual Studio"></div>
+				  <div class="skill-bubble en-cours"><img src="Images-general/oracle.png" alt="Oracle"></div>
+				  <div class="skill-bubble en-cours"><img src="Images-general/vp.png" alt="Visual Paradigm"></div>
+				  
+				</div>
+			</div>
+
+			<div class="legend-container">
+			  <div class="legend-item">
+				<span class="legend mastered"></span>
+				<span> Maîtrisés</span>
+			  </div>
+			  <div class="legend-item">
+				<span class="legend learning"></span>
+				<span>En cours d’apprentissage</span>
+			  </div>
+			  <div class="legend-item">
+				<span class="legend to-learn"></span>
+				<span>Souhaités</span>
+			  </div>
+			</div>
+
+		</section>
+
+		<section class="barre-nav">
+			<div class="nav-pages">
+				<ul>
+					<li>
+						<a href="./index.html">
+							<i class="fa-solid fa-home fa-2x" ></i>
+							<p>Accueil</p>
+						</a>
+					</li>
+					<li>
+						<a href="./Projets.html">
+							<i class="fa-solid fa-folder fa-2x" aria-hidden="true"></i>
+							<p>Projets</p>
+						</a>
+					</li>
+					<li>
+						<a href="./a-propos.html">
+							<i class="fa fa-user fa-2x" aria-hidden="true"></i>
+							<p> A propos </p>
+						</a>
+					<li>
+						<a href="./competences.html" class="pageActuelle">
+							<i class="fa-solid fa-code fa-2x" aria-hidden="true"></i>
+							<p>Compétences</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<script src="javascript/toogle-menu.js"></script>
+</body>
+<footer>
+	<div class="footer-simple">
+		<p>&copy; 2025 Ilan Luis — Portfolio personnel</p>
+		<p class="footer-date">Dernière mise à jour : 14 avril 2025</p>
+	</div>
+</footer>
+
+</html>

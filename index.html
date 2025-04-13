@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ilan Luis</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1> PORTFOLIO DE ILAN LUIS </h1>
+		<button class="menu-toggle" onclick="toggleMenu()">
+			<i class="fa fa-bars fa-2x"></i>
+		</button>		
+    </header>
+	
+	<main>
+		<section class="profil">
+			<img src="./Images-general/pdp.jpg">
+			<h1> Ilan LUIS </h1>
+			<div class="text-description">
+				<p> Etudiant en première année à l'IUT d'Orsay, je suis passionné par la programmation et le développement</p>
+			</div>
+			<hr>
+			<div class="titreContact">
+				<p>Coordonnées </p>
+			</div>
+			<div class="contacts">
+				<div class="info">
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blanck"> linkedin.com/in/ilan-luis</a>
+				</div>
+				<hr>
+				<div class="info">
+					<a href="https://github.com/Ilanbs14" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a href="https://github.com/Ilanbs14" target="_blanck"> github.com/Ilanbs14</a>
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-envelope"></i> luisilonald14@gmail.com
+				</div>
+				<hr>
+				<div class="info">
+					<i class="fa fa-phone"></i>+33 (0)7 67 27 87 18
+				</div>
+			</div>
+			
+			<div class="voirCv">
+				<a href="./CV_Ilan_LUIS.pdf" target="_blank"> Voir mon CV </a>
+			</div>
+		</section>
+		
+		<section class="content">
+			<div class="titreContent">
+				<p>Annonces</p>
+			</div>
+			<hr>
+			<section class="annonces">
+				<div class="themeAnnonce"> RECHERCHE ALTERNANCE EN DEVELOPPEMENT INFORMATIQUE </div>
+				<p>Je suis actuellement à la recherche d’un contrat d’apprentissage en développement informatique pour une durée de 2 ans.</p>
+				<ul>
+					<li><strong>Lieu :</strong> Île-de-France</li>
+					<li><strong>Période :</strong> Septembre 2025 à Août 2027</li>
+					<li><strong>Durée :</strong> 24 mois</li>
+					<li><strong>Rythme d’alternance :</strong>
+					<ul>
+						<li>1<sup>ère</sup> année : 2 jours en entreprise (lundi et mardi)</li>
+						<li>2<sup>ème</sup> année : 3 jours en entreprise (mercredi, jeudi et vendredi)</li>
+					</ul>
+					</li>
+				</ul>
+				<p> <a href="CV_Ilan_LUIS.pdf"> Mon CV </a> </p>
+			</section> 
+			
+			<div class="titreContent">
+				<p>Mes derniers projets</p>
+			</div>
+			<hr>
+			<section class="projets">
+				<div class="liste-projets">
+				
+					<div class="projet">
+						<a href="projets.html#projet-parc" class="lien-projet">
+							<img src="./Images-index/projet1.png">
+						</a>
+						<p class="texteAdapte titreProjet">Site web parc d'attraction fictif</p>
+						<table class="infosProjet">
+							<tr><td>Langage</td><td>HTML/CSS</td></tr>
+							<tr><td>Date</td><td>Décembre 2024</td></tr>
+							<tr><td>Participation</td><td>En duo</td></tr>
+							<tr><td>Type</td><td>Projet scolaire</td></tr>
+						</table>
+					</div>
+					
+					<div class="projet">
+						<a href="projets.html#projet-banque" class="lien-projet">
+							<img src="./Images-index/projet2.jpg">
+						</a>
+						<p class="texteAdapte titreProjet">Base de données banque fictive</p>
+						<table class="infosProjet">
+							<tr><td>Langage</td><td>SQL</td></tr>
+							<tr><td>Date</td><td>Novembre 2024</td></tr>
+							<tr><td>Participation</td><td>En duo</td></tr>
+							<tr><td>Type</td><td>Projet scolaire</td></tr>
+						</table>
+					</div>
+					
+					<a href="Projets.html" class="lien-projet">
+						<div class="voirPlus">
+							<div class="cerclePlus">
+								<i class="fa fa-plus fa-6x"></i>
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
+			
+		</section>
+
+		<section class="barre-nav">
+			<div class="nav-pages">
+				<ul>
+					<li>
+						<a href="./index.html" class="pageActuelle">
+							<i class="fa-solid fa-home fa-2x" ></i>
+							<p>Accueil</p>
+						</a>
+					</li>
+					<li>
+						<a href="./projets.html">
+							<i class="fa-solid fa-folder fa-2x" aria-hidden="true"></i>
+							<p>Projets</p>
+						</a>
+					</li>
+					<li>
+						<a href="./a-propos.html">
+							<i class="fa fa-user fa-2x" aria-hidden="true"></i>
+							<p> A propos </p>
+						</a>
+					<li>
+						<a href="./competences.html">
+							<i class="fa-solid fa-code fa-2x" aria-hidden="true"></i>
+							<p>Compétences</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	
+	<script src="./javascript/adapt-text.js"></script>
+	<script src="./javascript/toogle-menu.js"></script>
+</body>
+<footer>
+	<div class="footer-simple">
+		<p>&copy; 2025 Ilan Luis — Portfolio personnel</p>
+		<p class="footer-date">Dernière mise à jour : 14 avril 2025</p>
+	</div>
+</footer>
+
+</html>

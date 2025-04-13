@@ -1,0 +1,149 @@
+.projet-detail {
+  margin-bottom: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px #1684af;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-detail:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 10px 3px black;
+  border: 1.5px solid black;
+}
+
+/* IMAGE ET TITRE */
+
+.image-titre {
+  position: relative;
+}
+
+.image-titre img {
+  width: 100%;
+  display: block;
+  box-shadow : 0 1px black;
+}
+
+/* Bulle titre */
+
+.bulle-titre {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Bulle langages (images) */
+
+.bulle-langages {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.bulle-langages img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+/* DESCRIPTION HAUTE */
+
+.description {
+  padding-left: 10px;
+  padding-right : 10px;
+  font-size: 15px;
+  position: relative;
+}
+
+.description-haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.btn-action {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.btn-action:hover {
+  background-color: #0056b3;
+}
+
+/* TEXTE COMPLET (caché au départ) */
+
+.texteComplet {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  white-space: pre-line;
+}
+
+.texteComplet p {
+	margin-top : 0;
+	margin-left : 8px;
+}
+
+.texteComplet.affiche {
+  max-height: 2000px; /* grande valeur pour tout afficher */
+}
+
+
+/* BOUTON AFFICHER PLUS / MOINS */
+
+.bas-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.voir-plus-btn {
+  background-color: transparent;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  font-size: 14px;
+  display : block;
+  margin-right : -10px;
+  margin-left : auto;
+  margin-bottom : 10px;
+}
+
+.voir-plus-btn:hover {
+  text-decoration: underline;
+}
+
+.fleche {
+  font-size: 12px;
+}
+
+/* DATE DU PROJET */
+
+.date-projet {
+  font-size: 13px;
+  color: #555;
+  margin-left: auto;
+}

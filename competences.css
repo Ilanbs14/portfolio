@@ -1,0 +1,86 @@
+/* Structure générale */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-bubble {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-bubble img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Code couleur bulles */
+.maitrise {
+  box-shadow: 0 0 15px rgba(39, 255, 0, 0.7); /* Vert doux */
+}
+
+.en-cours {
+  box-shadow: 0 0 15px rgba(255, 170, 0, 0.7); /* Orange foncé */
+}
+
+.a-apprendre {
+  box-shadow: 0 0 15px rgba(255,0 ,0, 0.7); /* Rouge vif */
+}
+
+/* Hover avec couleur fluo associée */
+.maitrise:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px 5px rgba(0, 255, 0, 0.9); /* Vert fluo */
+}
+
+.en-cours:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px 5px rgba(255, 200, 0, 0.9); /* Jaune fluo */
+}
+
+.a-apprendre:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px 5px rgba(255,0,0, 0.9); /* Bleu fluo */
+}
+
+/* Légende claire et lisible */
+.legend-container {
+  margin-top: 30px;
+  display : flex;
+  gap : 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.legend {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.legend.mastered {
+  background-color: rgb(0, 200, 0);
+}
+
+.legend.learning {
+  background-color: rgb(255, 170, 0);
+}
+
+.legend.to-learn {
+  background-color: rgb(255, 0, 0);
+}
+
