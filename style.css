@@ -142,7 +142,8 @@ main {
 
 .titreContent p { /* Style des titres présents sur la page principale d'accueil */
 	font-size : 35px;
-	line-height : 5px;
+	margin-top : 15px;
+	margin-bottom : 10px;
 	font-weight : bold;
 }
 
@@ -282,8 +283,5 @@ footer {
 		flex-direction : column;
 		gap : 20px;
 		align-items : center;
-	}
-	.titreContent p {
-		line-height : 25px;
 	}
 }
