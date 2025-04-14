@@ -283,5 +283,7 @@ footer {
 		gap : 20px;
 		align-items : center;
 	}
-	
+	.titreContent {
+		line-height : 1.4;
+	}
 }
