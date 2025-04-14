@@ -31,7 +31,7 @@ main {
 	padding : 15px;
 	background : white;
 	text-align : center;
-	background : #cbcfff;
+	background : #CCE9F5;
 	max-width : 300px;
 	border-radius : 20px;
 }
@@ -124,7 +124,7 @@ main {
     overflow-y: auto;
     height: 100vh;
     padding: 20px;
-	background : #cbcfff;
+	background : #CCE9F5;
 	border : 2px solid black;
 	border-radius : 20px;
     scrollbar-width: none; /* Masquer la scrollbar (Firefox) */
@@ -155,7 +155,7 @@ main {
     border-radius: 20px;
     width: 90%;
     padding: 15px 0;
-    background: #cbcfff;
+    background: #CCE9F5;
     display: flex;
     justify-content: center;
 }
