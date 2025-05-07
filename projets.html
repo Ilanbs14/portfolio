@@ -58,10 +58,46 @@
 		</section>
 		
 		<section class="content">
-			
-			<section class="projet-detail" id="projet-jeu">
+			<!-- Filtres -->
+			<div class="filtres">
+				<label for="filtre-type">Type :</label>
+				<select id="filtre-type" onchange="filtrerProjets()">
+					<option value="">Tous</option>
+					<option value="scolaire">Scolaire</option>
+					<option value="personnel">Personnel</option>
+				</select>
+
+				<label for="filtre-categorie">Catégorie :</label>
+				<select id="filtre-categorie" onchange="filtrerProjets()">
+					<option value="">Toutes</option>
+					<option value="jeu">Jeu</option>
+					<option value="site-web">Site web</option>
+					<option value="base-de-donnees">Base de données</option>
+				</select>
+
+				<label for="filtre-langage">Langage :</label>
+				<select id="filtre-langage" onchange="filtrerProjets()">
+					<option value="">Tous</option>
+					<option value="c++">C++</option>
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="sql">SQL</option>
+				</select>
+
+				<button class="trierParDate" onclick="trierParDate()" id="bouton-tri">Trier par date croissante ↑</button>
+			</div>            
+
+            <!-- Projets -->
+            <div id="liste-projets">
+                <section class="projet-detail" 
+					id="projet-jeu"
+					data-type="scolaire"
+					data-categorie="jeu"
+					data-langages="c++"
+					data-date="12/2024"
+				>
 				<div class="image-titre">
-					<img src="Images-projets/jeu2d.png" alt="Aperçu du jeu C++">
+					<img src="Images-projets/jeu2d.png">
 					<div class="bulle-titre">Jeu en 2D</div>
 					<div class="bulle-langages">
 						<img src="Images-general/c++.png" alt="HTML">
@@ -94,7 +130,7 @@
 							</p>
 						</div>
 						
-						<a href="https://github.com/ilanbs14/jeu-2d" target="_blank" class="btn-action" title="Voir le code sur gihtub">Voir le code</a>
+						<a href="https://github.com/ilanbs14/jeu-2d" target="_blank" class="btn-action">Voir les codes</a>
 					</div>
 
 					<div class="bas-description">
@@ -106,9 +142,15 @@
 				</div>
 			</section>
 			
-			<section class="projet-detail" id="projet-parc">
+			<section class="projet-detail" 
+				id="projet-parc"
+				data-type="scolaire"
+				data-categorie="site-web"
+				data-langages="html,css"
+				data-date="12/2024"
+			>
 				<div class="image-titre">
-					<img src="Images-projets/parc-attraction.png" alt="Aperçu du site web Saiyan Land">
+					<img src="Images-projets/parc-attraction.png">
 					<div class="bulle-titre">Site web parc d'attraction</div>
 					<div class="bulle-langages">
 						<img src="Images-general/html-5.png" alt="HTML">
@@ -122,8 +164,8 @@
 							<p>
 							<strong>Type de projet :</strong> Scolaire  
 							<strong>Langages :</strong> HTML/CSS
-							<strong>Outil(s)</strong> : Notepad++
-							<strong>Travail en duo :</strong> Mohamed BEN TALEB
+							<strong> Outil(s)</strong> : Notepad++
+							<strong>Duo :</strong> Mohamed BEN TALEB
 							<br>
 							<strong>Objectif de ce projet :</strong> Réaliser un site web (fictif) d'un lieu consacré au divertissement en duo 
 							<br>
@@ -159,9 +201,15 @@
 				</div>
 			</section>
 			
-			<section class="projet-detail" id="projet-banque">
+			<section class="projet-detail" 
+				id="projet-banque"
+				data-type="scolaire"
+				data-categorie="base-de-donnees"
+				data-langages="sql"
+				data-date="11/2024"
+			>
 				<div class="image-titre">
-					<img src="Images-projets/bdd-banque.png" alt="Aperçu d'une requête de la base">
+					<img src="Images-projets/bdd-banque.png">
 					<div class="bulle-titre">Base de données d'une banque</div>
 					<div class="bulle-langages">
 						<img src="Images-general/sql.png" alt="SQL">
@@ -175,7 +223,7 @@
 							<strong>Type de projet :</strong> Scolaire  
 							<strong>Langages :</strong> SQL
 							<strong>Outil(s) :</strong> DB browser (SQLITE), Looping et Mocodo
-							<strong>Travail en duo avec :</strong> Abdelmoumen HANNACHI
+							<strong>Duo :</strong> Abdelmoumen HANNACHI
 							<br>
 							<strong>Objectif de ce projet :</strong> En partant d'un besoin exprimé par un client, étudier puis réaliser une base de données portant sur une partie du système d'information à développer.
 							<br>
@@ -193,7 +241,7 @@
 							</p>
 						</div>
 						
-						<a href="https://github.com/Ilanbs14/BDD-Banque" target="_blank" class="btn-action" title="Voir le code sur github">Voir le SQL</a>
+						<a href="https://github.com/Ilanbs14/BDD-Banque" target="_blank" class="btn-action">Voir le SQL</a>
 					</div>
 
 					<div class="bas-description">
@@ -203,7 +251,12 @@
 						<div class="date-projet">Novembre 2024</div>
 					</div>
 				</div>
+
+				
 			</section>
+            </div>
+			<p id="message-vide" style="display:none; font-style: italic; color: #555;">Aucun projet ne correspond aux filtres sélectionnés.</p>
+			
 		</section>
 
 		<section class="barre-nav">
@@ -239,11 +292,13 @@
 	<script src="./javascript/adapt-text.js"></script>
 	<script src="./javascript/voir-plus-btn.js"></script>
 	<script src="./javascript/toogle-menu.js"></script>
+	<script src="./javascript/filtres-tri.js"></script>
+
 </body>
 <footer>
 	<div class="footer-simple">
 		<p>&copy; 2025 Ilan Luis — Portfolio personnel</p>
-		<p class="footer-date">Dernière mise à jour : 5 mai 2025</p>
+		<p class="footer-date">Dernière mise à jour : 7 mai 2025</p>
 	</div>
 </footer>
 

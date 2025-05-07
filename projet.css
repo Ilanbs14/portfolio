@@ -110,6 +110,36 @@
   max-height: 2000px; /* grande valeur pour tout afficher */
 }
 
+.filtres label, select {
+	margin-bottom : 14px;
+	margin-top : 12px;
+}
+
+.filtres select {
+	margin-right : 7px;
+	border-radius : 5px;
+}
+
+.trierParDate {
+	float : right;
+	border : none;
+	background-color : transparent;
+	padding-right : 0px;
+	margin-right : 0px;
+	font-size : 12px;
+	cursor : pointer;
+	margin-top : 0px;
+}
+
+.trierParDate:hover {
+	font-weight : bold;
+}
+
+#message-vide {
+	text-align : center;
+	margin-top : 40px;
+	font-size : 25px;
+}
 
 /* BOUTON AFFICHER PLUS / MOINS */
 
