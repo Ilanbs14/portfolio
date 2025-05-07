@@ -112,20 +112,21 @@
 
 .filtres label, select {
 	margin-bottom : 14px;
-	margin-top : 12px;
+	margin-top : 5px;
 }
 
 .filtres select {
-	margin-right : 7px;
 	border-radius : 5px;
+}
+
+.tri {
+	margin-bottom : 20px;
 }
 
 .trierParDate {
 	float : right;
 	border : none;
 	background-color : transparent;
-	padding-right : 0px;
-	margin-right : 0px;
 	font-size : 12px;
 	cursor : pointer;
 	margin-top : 0px;
