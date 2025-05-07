@@ -58,8 +58,12 @@
 		</section>
 		
 		<section class="content">
+			<div class="tri">
+				<button class="trierParDate" onclick="trierParDate()" id="bouton-tri">Trier par date croissante ↑</button>
+			</div>
 			<!-- Filtres -->
 			<div class="filtres">
+				
 				<label for="filtre-type">Type :</label>
 				<select id="filtre-type" onchange="filtrerProjets()">
 					<option value="">Tous</option>
@@ -84,7 +88,6 @@
 					<option value="sql">SQL</option>
 				</select>
 
-				<button class="trierParDate" onclick="trierParDate()" id="bouton-tri">Trier par date croissante ↑</button>
 			</div>            
 
             <!-- Projets -->
