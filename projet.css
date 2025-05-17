@@ -23,32 +23,28 @@
 .image-titre img {
   width: 100%;
   display: block;
-  box-shadow : 0 1px black;
+  box-shadow: 0 1px black;
 }
 
-/* Bulle titre */
-
-.bulle-titre {
+.bulle-titre,
+.bulle-langages {
   position: absolute;
   bottom: 10px;
-  left: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 8px 12px;
   border-radius: 8px;
+}
+
+.bulle-titre {
+  left: 10px;
+  padding: 8px 12px;
   font-size: 18px;
   font-weight: bold;
 }
 
-/* Bulle langages (images) */
-
 .bulle-langages {
-  position: absolute;
-  bottom: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 6px 10px;
-  border-radius: 8px;
   display: flex;
   gap: 6px;
 }
@@ -57,14 +53,13 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
-  box-shadow: none;
+  box-shadow : none;
 }
 
-/* DESCRIPTION HAUTE */
+/* DESCRIPTION */
 
 .description {
-  padding-left: 10px;
-  padding-right : 10px;
+  padding: 0 10px;
   font-size: 15px;
   position: relative;
 }
@@ -74,6 +69,20 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
+
+.bloc-infos {
+  flex: 1;
+  min-width: 220px;
+}
+
+.bloc-bouton {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 120px;
 }
 
 .btn-action {
@@ -93,7 +102,7 @@
   background-color: #0056b3;
 }
 
-/* TEXTE COMPLET (caché au départ) */
+/* TEXTE COMPLET */
 
 .texteComplet {
   overflow: hidden;
@@ -102,47 +111,43 @@
 }
 
 .texteComplet p {
-	margin-top : 0;
-	margin-left : 8px;
+  margin-top: 0;
+  margin-left: 8px;
 }
 
 .texteComplet.affiche {
-  max-height: 2000px; /* grande valeur pour tout afficher */
+  max-height: 2000px;
 }
 
-.filtres label, select {
-	margin-bottom : 14px;
-	margin-top : 5px;
+/* FILTRES ET TRI */
+
+.filtres label,
+.filtres select {
+  margin-bottom: 14px;
+  margin-top: 5px;
 }
 
 .filtres select {
-	border-radius : 5px;
+  border-radius: 5px;
 }
 
 .tri {
-	margin-bottom : 20px;
+  margin-bottom: 20px;
 }
 
 .trierParDate {
-	float : right;
-	border : none;
-	background-color : transparent;
-	font-size : 12px;
-	cursor : pointer;
-	margin-top : 0px;
+  float: right;
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .trierParDate:hover {
-	font-weight : bold;
+  font-weight: bold;
 }
 
-#message-vide {
-	text-align : center;
-	margin-top : 40px;
-	font-size : 25px;
-}
-
-/* BOUTON AFFICHER PLUS / MOINS */
+/* BOUTON "VOIR PLUS" */
 
 .bas-description {
   display: flex;
@@ -157,10 +162,9 @@
   color: #007BFF;
   cursor: pointer;
   font-size: 14px;
-  display : block;
-  margin-right : -10px;
-  margin-left : auto;
-  margin-bottom : 10px;
+  margin-right: -10px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 .voir-plus-btn:hover {
@@ -177,4 +181,14 @@
   font-size: 13px;
   color: #555;
   margin-left: auto;
+}
+
+/* MESSAGE VIDE */
+
+#message-vide {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+  font-style: italic;
+  color: #555;
 }

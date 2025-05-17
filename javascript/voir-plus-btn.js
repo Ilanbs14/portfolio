@@ -1,19 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const descriptions = document.querySelectorAll(".texteComplet");
-  const limiteCaracteres = 250;
+  const descriptions = document.querySelectorAll(".texteComplet:not(.objectif)");
 
   descriptions.forEach(texte => {
-    const contenuComplet = texte.innerHTML.trim(); // Utilisation de innerHTML pour garder les balises HTML
+    const contenuComplet = texte.innerHTML.trim();
 
-    if (contenuComplet.length > limiteCaracteres) {
-      const contenuCourt = contenuComplet.slice(0, limiteCaracteres) + "...";
+    texte.setAttribute("data-complet", contenuComplet);
+    texte.setAttribute("data-affiche", "non");
 
-      texte.setAttribute("data-complet", contenuComplet);
-      texte.setAttribute("data-court", contenuCourt);
-      texte.setAttribute("data-affiche", "non");
-
-      texte.innerHTML = contenuCourt; // Utilisation de innerHTML pour afficher un extrait
-    }
+    texte.innerHTML = ""; // Masquer tout au début
   });
 
   const boutons = document.querySelectorAll(".voir-plus-btn");
@@ -23,18 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const projet = btn.closest(".projet-detail");
       const texte = projet.querySelector(".texteComplet");
 
-      const affiche = texte.getAttribute("data-affiche") === "oui";
+      const estAffiche = texte.getAttribute("data-affiche") === "oui";
 
-      if (!affiche) {
-        texte.innerHTML = texte.getAttribute("data-complet"); // Restaure le contenu complet avec HTML
+      if (!estAffiche) {
+        texte.innerHTML = texte.getAttribute("data-complet");
         texte.classList.add("affiche");
         texte.setAttribute("data-affiche", "oui");
-        btn.innerHTML = 'Afficher moins <span class="fleche">▲</span>';
+        btn.innerHTML = '<span class="fleche">▲</span> Cacher la description <span class="fleche">▲</span>';
       } else {
-        texte.innerHTML = texte.getAttribute("data-court"); // Restaure l'extrait avec HTML
+        texte.innerHTML = "";
         texte.classList.remove("affiche");
         texte.setAttribute("data-affiche", "non");
-        btn.innerHTML = 'Afficher plus <span class="fleche">▼</span>';
+        btn.innerHTML = '<span class="fleche">▼</span>Afficher la description <span class="fleche">▼</span>';
       }
     });
   });
