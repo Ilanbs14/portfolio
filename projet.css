@@ -148,10 +148,8 @@
 /* BOUTON "VOIR PLUS" */
 
 .bas-description {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
+  text-align : center;
+  margin-top: 10px;
 }
 
 .voir-plus-btn {
@@ -178,7 +176,9 @@
 .date-projet {
   font-size: 13px;
   color: #555;
-  margin-left: auto;
+  margin : 8px;
+  margin-right : 3px;
+  text-align : right;
 }
 
 /* MESSAGE VIDE */
