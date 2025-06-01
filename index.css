@@ -24,6 +24,151 @@
 	border : 1px solid black;
 }
 
+
+.citation-du-jour p {
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+    color: 	#00ff1a;
+	background-color : black;
+	border-radius : 30px;
+	padding : 15px 0 ;
+	margin: 20px 20px 0px 20px;
+}
+
+/* Style pour la notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* Style général du formulaire */
+.formulaire-citation {
+    max-width: 600px;
+    margin: auto;
+	margin-top : 15px;
+	margin-bottom : 15px;
+	text-align : center;
+}
+
+.formulaire-citation h2 {
+    display : inline-block;
+    font-size: 18px;
+	margin : 0;
+	padding : 0;
+    margin-bottom: 5x;
+	margin-top : 10px;
+    color: #555;
+}
+
+/* Style des labels */
+.formulaire-citation label {
+    display: block;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+	margin-left : 5px;
+	text-align : left;
+}
+
+/* Style des champs de saisie */
+.formulaire-citation input[type="text"],
+.formulaire-citation textarea {
+    width: 100%;
+	margin-bottom : 7px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 11px;
+    transition: border-color 0.3s ease;
+	box-sizing: border-box;
+}
+
+/* Focus sur les champs de saisie */
+.formulaire-citation input[type="text"]:focus,
+.formulaire-citation textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Style du bouton d'envoi */
+.formulaire-citation button[type="submit"] {
+	margin-top : 10px;
+	display : block;
+	margin-left : auto;
+	margin-right : auto;
+    padding: 13px;
+    font-size: 14px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.formulaire-citation button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+.notification.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Style pour les messages d'erreur ou autres alertes */
+.alert {
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Pour l'élément cliquable */
+#toggleCitationForm {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left : auto;
+	margin-right : auto;
+}
+
+/* Effet au survol du lien */
+#toggleCitationForm:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire caché par défaut */
+#citationFormContainer {
+    margin-top: 10px;
+    display: none; /* Le formulaire est caché par défaut */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation du formulaire */
+#citationFormContainer.show {
+    display: block;
+}
+
+
 .projets {
 	border-radius : 10px;
 	padding-left : 5px;

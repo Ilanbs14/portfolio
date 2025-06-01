@@ -19,7 +19,7 @@
 	
 	<main>
 		<section class="profil">
-			<img src="./Images-general/pdp.jpg">
+			<img src="./Images-general/pdp.jpg" alt="Photo de Ilan Luis" oncontextmenu="return false;">
 			<h1> Ilan LUIS </h1>
 			<div class="text-description">
 				<p> Etudiant en première année à l'IUT d'Orsay, je suis passionné par la programmation et le développement informatique</p>
@@ -33,14 +33,14 @@
 					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank">
 						<i class="fa-brands fa-linkedin"></i>
 					</a>
-					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blanck"> linkedin.com/in/ilan-luis</a>
+					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank"> linkedin.com/in/ilan-luis</a>
 				</div>
 				<hr>
 				<div class="info">
 					<a href="https://github.com/Ilanbs14" target="_blank">
 						<i class="fa-brands fa-github"></i>
 					</a>
-					<a href="https://github.com/Ilanbs14" target="_blanck"> github.com/Ilanbs14</a>
+					<a href="https://github.com/Ilanbs14" target="_blank"> github.com/ilanbs14</a>
 				</div>
 				<hr>
 				<div class="info">
@@ -78,6 +78,40 @@
 				</ul>
 				<p> <a href="CV_Ilan_LUIS.pdf"> Mon CV </a> </p>
 			</section> 
+			
+			
+			<div class="titreContent">
+				<p>La citation du jour</p>
+			</div>
+			<div class="citation-du-jour"><hr>
+				<p id="citationdujour"></p>
+			</div>
+			<section class="formulaire-citation">
+				<h2 id="toggleCitationForm">Proposez votre propre citation</h2> 
+				
+				<!-- Formulaire caché par défaut -->
+				<div id="citationFormContainer" style="display: none;">
+					<form id="citationForm"  action="https://formsubmit.co/luisilonald14@gmail.com" method="POST" onsubmit="afficherNotification()">
+						<label for="nom">Nom :</label>
+						<input type="text" id="nom" name="nom" placeholder="NOM" required><br>
+						
+						<label for="prenom">Prénom :</label>
+						<input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
+
+						<label for="citation">Votre citation: </label>
+						<textarea id="citation" name="citation" rows="4" required></textarea><br>
+						
+						<label for="auteur">Auteur de la citation : </label>
+						<input type="text" id="auteur" name="auteur" placeholder="Inconnu" ><br>
+						
+						<input type="hidden" name="_subject" value="Nouvelle proposition de citation">
+						
+						<button type="submit">Envoyer ma citation</button>
+					</form>
+				</div>
+			</section>
+
+			
 			
 			<div class="titreContent">
 				<p>Mes derniers projets</p>
@@ -155,13 +189,20 @@
 		</section>
 	</main>
 	
+	<div id="notification" class="notification" style="display: none;">
+		Citation envoyée avec succès !
+	</div>
+
+
 	<script src="./javascript/adapt-text.js"></script>
 	<script src="./javascript/toogle-menu.js"></script>
+	<script src=".javascript/citations.js"></script>
+
 </body>
 <footer>
 	<div class="footer-simple">
 		<p>&copy; 2025 Ilan Luis — Portfolio personnel</p>
-		<p class="footer-date">Dernière mise à jour : 15 mai 2025</p>
+		<p class="footer-date">Dernière mise à jour : 1 juin 2025</p>
 	</div>
 </footer>
 
