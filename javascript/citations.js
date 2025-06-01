@@ -87,9 +87,42 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
             event.preventDefault();
             return;
         }
-
-        afficherNotification();
+		
+		afficherNotification();
     });
+	
+	function mettreEnMajuscule(event) {
+		// Convertir la saisie en majuscules
+		this.value = this.value.toUpperCase();
+	}
+	
+	function premiereLettreEnMajuscule(event) {
+		let value = this.value;
+		value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase(); 
+		this.value = value;
+	}
+	
+	function caracteresInterdits(event) {
+		let value = this.value;
+		
+		const regex = /^[A-Za-z]+$/;
+
+		// Si la saisie contient des caractères invalides, on les supprime
+		if (!regex.test(this.value)) {
+			event.preventDefault();
+			this.value = this.value.replace(/[^A-Za-z]/g, ''); // Supprime les caractères non valides
+		}
+	}
+	
+	document.getElementById("prenom").addEventListener("input", premiereLettreEnMajuscule);
+	document.getElementById("citation").addEventListener("input", premiereLettreEnMajuscule);
+	
+	document.getElementById("nom").addEventListener("input", mettreEnMajuscule);
+	document.getElementById("auteur").addEventListener("input", mettreEnMajuscule);
+	
+	document.getElementById("prenom").addEventListener("input", caracteresInterdits);
+	document.getElementById("nom").addEventListener("input", caracteresInterdits);
+		
 
     // Appel de la fonction dès le chargement de la page
     window.onload = afficherCitationDuJour;
