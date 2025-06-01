@@ -87,6 +87,8 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
             event.preventDefault();
             return;
         }
+
+        afficherNotification();
     });
 
     // Appel de la fonction dès le chargement de la page
