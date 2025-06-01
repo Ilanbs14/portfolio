@@ -88,7 +88,27 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
             return;
         }
 		
-		afficherNotification();
+		event.preventDefault(); // Empêche la soumission par défaut
+
+        // Récupérer les données du formulaire
+        const formData = new FormData(event.target);
+        
+        fetch("https://formsubmit.co/luisilonald14@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Si l'envoi est réussi, afficher la notification de succès
+                afficherNotification();
+            } else {
+                alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
+            }
+        })
+        .catch(error => {
+            console.error("Erreur:", error);
+            alert("Une erreur est survenue.");
+        });
     });
 	
 	function mettreEnMajuscule(event) {
@@ -113,7 +133,8 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 			this.value = this.value.replace(/[^A-Za-z]/g, ''); // Supprime les caractères non valides
 		}
 	}
-	
+
+
 	document.getElementById("prenom").addEventListener("input", premiereLettreEnMajuscule);
 	document.getElementById("citation").addEventListener("input", premiereLettreEnMajuscule);
 	
