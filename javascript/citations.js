@@ -92,7 +92,7 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 
         // Récupérer les données du formulaire
         const formData = new FormData(event.target);
-        
+
         fetch("https://formsubmit.co/luisilonald14@gmail.com", {
             method: "POST",
             body: formData
@@ -101,6 +101,8 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
             if (response.ok) {
                 // Si l'envoi est réussi, afficher la notification de succès
                 afficherNotification();
+                event.target.reset();
+                document.getElementById("citationFormContainer").style.display = "none";
             } else {
                 alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
             }
