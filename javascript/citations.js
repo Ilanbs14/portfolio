@@ -62,10 +62,10 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 	// Afficher la notification après la soumission du formulaire
     function afficherNotification() {
         if (formulaireEnvoye) {
-            notification = document.getElementById('notificationAjout');
+            notification = document.getElementById('notificationInterdit');
         }
         else {
-            notification = document.getElementById('notificationInterdit');
+            notification = document.getElementById('notificationAjout');
         }
         notification.style.display = 'block'; // Afficher la notification
 
