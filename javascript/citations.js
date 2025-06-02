@@ -108,7 +108,8 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 
         fetch("https://formsubmit.co/el/rovoyu", {
             method: "POST",
-            body: formData
+            body: formData,
+            redirect : "manual"
         })
         .then(response => {
             if (response.ok) {
