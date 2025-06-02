@@ -106,10 +106,9 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
         // Récupérer les données du formulaire
         const formData = new FormData(event.target);
 
-        fetch("https://formsubmit.co/el/rovoyu", {
+        fetch("https://formsubmit.co/luisilonald14@gmail.com", {
             method: "POST",
-            body: formData,
-            redirect : "manual"
+            body: formData
         })
         .then(response => {
             if (response.ok) {
