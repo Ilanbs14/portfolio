@@ -61,6 +61,8 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 	
 	// Afficher la notification après la soumission du formulaire
     function afficherNotification() {
+        let notification;
+
         if (formulaireEnvoye) {
             notification = document.getElementById('notificationInterdit');
         }
