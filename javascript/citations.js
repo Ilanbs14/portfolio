@@ -1,58 +1,3 @@
-document.getElementById("toggleCitationForm").addEventListener("click", function() {
-		const formContainer = document.getElementById("citationFormContainer");
-		const couleurQuestion = document.getElementById("toggleCitationForm");
-		
-		// Toggle pour afficher/masquer le formulaire
-		formContainer.style.display = (formContainer.style.display === 'none' || formContainer.style.display === '') ? 'block' : 'none';
-		
-		const currentColor = window.getComputedStyle(couleurQuestion).color; // Récupérer la couleur actuelle
-		couleurQuestion.style.color = (currentColor === 'rgb(85, 85, 85)') ? 'black' : '#555'; // rgb(85, 85, 85) correspond à #555
-	});
-
-
-    // Tableau des citations
-    const citations = [
-        "Les meilleures idées naissent souvent dans le chaos. – Steve Jobs",
-        "Un programmeur qui se contente de coder ne sera jamais un bon développeur. – Martin Fowler",
-        "L’information n’a de valeur que lorsqu’elle est comprise. – Albert Einstein",
-        "Le développement est un voyage, pas une destination. – Unknown",
-        "L’innovation est ce qui distingue un leader d’un suiveur. – Steve Jobs",
-        "Le plus grand danger dans le développement logiciel, c’est de croire que tout est sous contrôle. – Unknown",
-        "Il n’y a pas de problème que la technologie ne puisse résoudre, mais parfois elle en crée de nouveaux. – Unknown",
-        "Le logiciel est un mélange de science et d’art. – Unknown",
-        "Celui qui n’essaie jamais ne fera jamais d’erreur. Mais celui qui n'essaie jamais ne réussira jamais non plus. – Unknown",
-        "Rien n'est aussi puissant qu'une idée dont le temps est venu. – Victor Hugo",
-        "Les ordinateurs ne peuvent pas mentir. Mais les programmes peuvent, eux. – Unknown",
-        "Tout le monde est un génie. Mais si vous jugez un poisson sur sa capacité à grimper à un arbre, il passera sa vie à croire qu’il est stupide. – Albert Einstein",
-        "Un bon développeur ne résout pas simplement des problèmes, il en crée. – Unknown",
-        "Le développement logiciel n’est pas une science, c’est une discipline. – Unknown",
-        "L’information est la nouvelle monnaie, et nous devons savoir l’utiliser correctement. – Unknown",
-        "Les erreurs sont les portes de la découverte. – James Joyce",
-        "Le code est comme de l'humour. Quand il faut l'expliquer, c'est qu’il est mauvais. – Cory House",
-        "L'informatique est trop importante pour la confier uniquement aux informaticiens. – Unknown",
-        "L’intelligence artificielle est l'ultime artifice, mais l'humain reste l'ultime créateur. – Unknown",
-        "Le code est poésie. – Unknown",
-        "Un problème bien posé est à moitié résolu. – Charles Kettering",
-        "Le plus grand ennemi de l’innovation n’est pas la technologie, c’est la peur de l’échec. – Unknown",
-        "Programmer, c’est comme résoudre des puzzles. C’est une recherche incessante de solutions. – Unknown",
-        "Un programme bien écrit est un poème que seule une machine peut lire. – Unknown",
-        "Rien ne se perd, rien ne se crée, tout se transforme... même le code. – Antoine Lavoisier (adapté)",
-        "Un bon code est comme un bon vin, il se bonifie avec le temps. – Unknown",
-        "Si vous ne pouvez pas l'expliquer simplement, vous ne le comprenez pas assez bien. – Albert Einstein",
-        "La programmation n’est pas juste un métier, c’est un mode de pensée. – Unknown",
-        "L’erreur n’est pas de tomber, mais de rester à terre. – John Bunyan",
-        "La technologie est un outil. Les idées qui l’accompagnent sont celles qui font la différence. – Unknown",
-        "En développement, chaque ligne de code est une conversation entre le développeur et la machine. – Unknown"
-    ];
-
-    // Fonction pour afficher la citation du jour
-    function afficherCitationDuJour() {
-        const aujourdhui = new Date();
-        const jourDuMois = aujourdhui.getDate(); // Récupère le jour du mois
-        const citationDuJour = citations[jourDuMois - 1]; // On choisit la citation en fonction du jour (1-31)
-        document.getElementById('citationdujour').textContent = citationDuJour; // Affiche la citation
-    }
-	
 let citationEnvoyee = false;  // Variable pour vérifier si une citation a été envoyée
 
 // Gestion du bouton de soumission
@@ -147,6 +92,7 @@ document.getElementById("citationForm").addEventListener("submit", function(even
 // Fonction pour afficher la notification de soumission réussie
 function afficherNotification() {
     const notification = document.getElementById('notification');
+    notification.textContent = "Votre citation a été envoyée avec succès !";  // Message de succès
     notification.style.display = 'block'; // Afficher la notification
 
     // Faire disparaître la notification après 5 secondes
@@ -159,6 +105,48 @@ function afficherNotification() {
         notification.style.display = 'none'; // Cacher la notification complètement
         notification.style.opacity = '1'; // Réinitialiser l'opacité
     }, 6000); // Juste après l'animation
+}
+
+let citations = [
+    "Les meilleures idées naissent souvent dans le chaos. – Steve Jobs",
+    "Un programmeur qui se contente de coder ne sera jamais un bon développeur. – Martin Fowler",
+    "L’information n’a de valeur que lorsqu’elle est comprise. – Albert Einstein",
+    "Le développement est un voyage, pas une destination. – Unknown",
+    "L’innovation est ce qui distingue un leader d’un suiveur. – Steve Jobs",
+    "Le plus grand danger dans le développement logiciel, c’est de croire que tout est sous contrôle. – Unknown",
+    "Il n’y a pas de problème que la technologie ne puisse résoudre, mais parfois elle en crée de nouveaux. – Unknown",
+    "Le logiciel est un mélange de science et d’art. – Unknown",
+    "Celui qui n’essaie jamais ne fera jamais d’erreur. Mais celui qui n'essaie jamais ne réussira jamais non plus. – Unknown",
+    "Rien n'est aussi puissant qu'une idée dont le temps est venu. – Victor Hugo",
+    "Les ordinateurs ne peuvent pas mentir. Mais les programmes peuvent, eux. – Unknown",
+    "Tout le monde est un génie. Mais si vous jugez un poisson sur sa capacité à grimper à un arbre, il passera sa vie à croire qu’il est stupide. – Albert Einstein",
+    "Un bon développeur ne résout pas simplement des problèmes, il en crée. – Unknown",
+    "Le développement logiciel n’est pas une science, c’est une discipline. – Unknown",
+    "L’information est la nouvelle monnaie, et nous devons savoir l’utiliser correctement. – Unknown",
+    "Les erreurs sont les portes de la découverte. – James Joyce",
+    "Le code est comme de l'humour. Quand il faut l'expliquer, c'est qu’il est mauvais. – Cory House",
+    "L'informatique est trop importante pour la confier uniquement aux informaticiens. – Unknown",
+    "L’intelligence artificielle est l'ultime artifice, mais l'humain reste l'ultime créateur. – Unknown",
+    "Le code est poésie. – Unknown",
+    "Un problème bien posé est à moitié résolu. – Charles Kettering",
+    "Le plus grand ennemi de l’innovation n’est pas la technologie, c’est la peur de l’échec. – Unknown",
+    "Programmer, c’est comme résoudre des puzzles. C’est une recherche incessante de solutions. – Unknown",
+    "Un programme bien écrit est un poème que seule une machine peut lire. – Unknown",
+    "Rien ne se perd, rien ne se crée, tout se transforme... même le code. – Antoine Lavoisier (adapté)",
+    "Un bon code est comme un bon vin, il se bonifie avec le temps. – Unknown",
+    "Si vous ne pouvez pas l'expliquer simplement, vous ne le comprenez pas assez bien. – Albert Einstein",
+    "La programmation n’est pas juste un métier, c’est un mode de pensée. – Unknown",
+    "L’erreur n’est pas de tomber, mais de rester à terre. – John Bunyan",
+    "La technologie est un outil. Les idées qui l’accompagnent sont celles qui font la différence. – Unknown",
+    "En développement, chaque ligne de code est une conversation entre le développeur et la machine. – Unknown"
+];
+
+// Fonction pour afficher la citation du jour
+function afficherCitationDuJour() {
+    const aujourdhui = new Date();
+    const jourDuMois = aujourdhui.getDate(); // Récupère le jour du mois
+    const citationDuJour = citations[jourDuMois - 1]; // On choisit la citation en fonction du jour (1-31)
+    document.getElementById('citationdujour').textContent = citationDuJour; // Affiche la citation
 }
 
 	
