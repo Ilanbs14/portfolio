@@ -103,6 +103,9 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
                 afficherNotification();
                 event.target.reset();
                 document.getElementById("citationFormContainer").style.display = "none";
+		
+		const currentColor = window.getComputedStyle(couleurQuestion).color; // Récupérer la couleur actuelle
+		couleurQuestion.style.color = 'green';
             } else {
                 alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
             }
