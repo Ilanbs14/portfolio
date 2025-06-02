@@ -53,68 +53,114 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
         document.getElementById('citationdujour').textContent = citationDuJour; // Affiche la citation
     }
 	
-	// Afficher la notification après la soumission du formulaire
-    function afficherNotification() {
-        const notification = document.getElementById('notification');
-        notification.style.display = 'block'; // Afficher la notification
+let citationEnvoyee = false;  // Variable pour vérifier si une citation a été envoyée
 
-        // Faire disparaître la notification après 5 secondes
-        setTimeout(function() {
-            notification.style.opacity = '0'; // Changer l'opacité pour un effet de disparition
-        }, 5000); // Après 5 secondes
+// Gestion du bouton de soumission
+document.getElementById("toggleCitationForm").addEventListener("click", function() {
+    const formContainer = document.getElementById("citationFormContainer");
+    const couleurQuestion = document.getElementById("toggleCitationForm");
 
-        // Cacher la notification après l'animation
-        setTimeout(function() {
-            notification.style.display = 'none'; // Cacher la notification complètement
-            notification.style.opacity = '1'; // Réinitialiser l'opacité
-        }, 6000); // Juste après l'animation
+    // Si une citation a déjà été envoyée
+    if (citationEnvoyee) {
+        // Afficher une notification indiquant que la citation a déjà été envoyée
+        afficherNotificationCitationEnvoyee();
+        return;  // Sort de la fonction pour ne pas ouvrir le formulaire
     }
 
-    // Validation du formulaire avant soumission
-    document.getElementById("citationForm").addEventListener("submit", function(event) {
-        const nom = document.getElementById("nom").value;
-        const citation = document.getElementById("citation").value;
-        const regexNom = /^[A-Za-z]+$/;
+    // Sinon, toggle pour afficher/masquer le formulaire
+    formContainer.style.display = (formContainer.style.display === 'none' || formContainer.style.display === '') ? 'block' : 'none';
 
-        if (!regexNom.test(nom)) {
-            alert("Le nom ne doit contenir que des lettres.");
-            event.preventDefault();
-            return;
+    // Changer la couleur du texte du bouton
+    const currentColor = window.getComputedStyle(couleurQuestion).color;
+    couleurQuestion.style.color = (currentColor === 'rgb(85, 85, 85)') ? 'black' : '#555';
+});
+
+// Fonction pour afficher une notification spéciale après envoi
+function afficherNotificationCitationEnvoyee() {
+    const notification = document.getElementById('notification');
+    notification.textContent = "Une citation a déjà été envoyée !";  // Message différent
+    notification.style.display = 'block'; // Afficher la notification
+
+    // Faire disparaître la notification après 5 secondes
+    setTimeout(function() {
+        notification.style.opacity = '0';  // Changer l'opacité pour un effet de disparition
+    }, 5000);  // Après 5 secondes
+
+    // Cacher la notification après l'animation
+    setTimeout(function() {
+        notification.style.display = 'none';
+        notification.style.opacity = '1';  // Réinitialiser l'opacité
+    }, 6000); // Juste après l'animation
+}
+
+// Validation du formulaire avant soumission
+document.getElementById("citationForm").addEventListener("submit", function(event) {
+    const nom = document.getElementById("nom").value;
+    const citation = document.getElementById("citation").value;
+    const regexNom = /^[A-Za-z]+$/;
+
+    // Validation du nom
+    if (!regexNom.test(nom)) {
+        alert("Le nom ne doit contenir que des lettres.");
+        event.preventDefault();
+        return;
+    }
+
+    // Validation de la citation
+    if (citation.length < 8) {
+        alert("La citation doit comporter au moins 8 caractères.");
+        event.preventDefault();
+        return;
+    }
+
+    event.preventDefault();  // Empêche la soumission par défaut
+
+    // Récupérer les données du formulaire
+    const formData = new FormData(event.target);
+
+    // Envoi via fetch
+    fetch("https://formsubmit.co/luisilonald14@gmail.com", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Si l'envoi est réussi, afficher la notification de succès
+            afficherNotification();
+            event.target.reset();
+            document.getElementById("citationFormContainer").style.display = "none";
+            const couleurQuestion = document.getElementById("toggleCitationForm");
+            couleurQuestion.style.color = 'green';
+            
+            // Mettre à jour l'état pour signaler que la citation a été envoyée
+            citationEnvoyee = true;
+        } else {
+            alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
         }
-
-        if (citation.length < 8) {
-            alert("La citation doit comporter au moins 8 caractères.");
-            event.preventDefault();
-            return;
-        }
-		
-		event.preventDefault(); // Empêche la soumission par défaut
-
-        // Récupérer les données du formulaire
-        const formData = new FormData(event.target);
-
-        fetch("https://formsubmit.co/luisilonald14@gmail.com", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                // Si l'envoi est réussi, afficher la notification de succès
-                afficherNotification();
-                event.target.reset();
-                document.getElementById("citationFormContainer").style.display = "none";
-		        const couleurQuestion = document.getElementById("toggleCitationForm");
-		        couleurQuestion.style.color = 'green';
-
-            } else {
-                alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
-            }
-        })
-        .catch(error => {
-            console.error("Erreur:", error);
-            alert("Une erreur est survenue.");
-        });
+    })
+    .catch(error => {
+        console.error("Erreur:", error);
+        alert("Une erreur est survenue lors de l'envoi de la citation.");
     });
+});
+
+// Fonction pour afficher la notification de soumission réussie
+function afficherNotification() {
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block'; // Afficher la notification
+
+    // Faire disparaître la notification après 5 secondes
+    setTimeout(function() {
+        notification.style.opacity = '0'; // Changer l'opacité pour un effet de disparition
+    }, 5000); // Après 5 secondes
+
+    // Cacher la notification après l'animation
+    setTimeout(function() {
+        notification.style.display = 'none'; // Cacher la notification complètement
+        notification.style.opacity = '1'; // Réinitialiser l'opacité
+    }, 6000); // Juste après l'animation
+}
+
 	
 	function mettreEnMajuscule(event) {
 		// Convertir la saisie en majuscules
