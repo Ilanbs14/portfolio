@@ -1,11 +1,8 @@
-const image = document.getElementById('imageProtegee');
-
-// Empêche le clic droit
-image.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
+document.querySelectorAll('.imageProtegee').forEach(function(img) {
+img.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Bloque clic droit
 });
-
-// Empêche le drag & drop
-image.addEventListener('dragstart', function(e) {
-    e.preventDefault();
+img.addEventListener('dragstart', function(e) {
+    e.preventDefault(); // Bloque le drag
+});
 });
