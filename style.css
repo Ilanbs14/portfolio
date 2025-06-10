@@ -49,8 +49,9 @@ main {
 }
 
 .titreProfil {
-	font-size : 1.6em;
+	font-size : 1.4em;
 	font-weight: bold;
+	padding : 5px;
 }
 
 .text-description {
