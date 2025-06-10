@@ -48,8 +48,9 @@ main {
 	box-shadow : 0 0 10px #6495ED;
 }
 
-.profil p {
-	font-size : 2.5em;
+.titreProfil {
+	font-size : 2em;
+	font-weight: bold;
 }
 
 .text-description {
