@@ -111,6 +111,7 @@ main {
     gap: 14px;
 	font-size:15px;
 	text-align : left;
+	cursor : 
 }
 
 .info i {
@@ -123,6 +124,9 @@ main {
 	color: black;
 }
 
+[data-copy] {
+	cursor : copy;
+}
 .voirCv a{
 	margin-top : 15px;
 	background-color : #6495ED;
