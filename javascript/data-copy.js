@@ -1,3 +1,13 @@
+function showToast(message = "Copié !") {
+    const toast = document.getElementById('copy-toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 1500);
+}
+
 document.querySelectorAll('[data-copy]').forEach(el => {
     el.addEventListener('click', () => {
         const text = el.textContent.trim();
@@ -9,7 +19,6 @@ document.querySelectorAll('[data-copy]').forEach(el => {
         document.execCommand('copy');
         document.body.removeChild(tempInput);
 
-        // Optionnel : feedback visuel
-        console.log(`Copié : ${text}`);
+        showToast(); // Affiche le toast
     });
 });
