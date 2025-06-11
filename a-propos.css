@@ -16,6 +16,7 @@
 
 .anneeEtudes {
   font-size : 19.2px;
+  color: #17428f;
 }
 
 .timeline {
@@ -40,12 +41,6 @@
   background-color: #1684af;
   border-radius: 50%;
   border: 3px solid white;
-}
-
-.timeline-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #17428f;
 }
 
 .timeline-content p {
