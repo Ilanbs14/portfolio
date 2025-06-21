@@ -11,7 +11,7 @@ tsParticles.load("particles-js", {
                 }
             },
             color: {
-                value: ["#26ecd1", "#cef1ff", "#1d2c32"]
+                value: ["#171515", "#cef1ff", "#1d2c32"]
             },
             shape: {
                 type: "circle",
@@ -31,8 +31,8 @@ tsParticles.load("particles-js", {
             },
             move: {
                 enable: true,
-                speed: 0.7,
-                direction: "none",
+                speed: { min : 0.5, max : 1.5},
+                direction: ["right", "bottom-right"],
                 out_mode: "out"
             }
         },
@@ -49,7 +49,7 @@ tsParticles.load("particles-js", {
             },
             modes: {
                 grab: {
-                    distance: 30
+                    distance: 60
                 },
                 push: {
                     quantity: 5
