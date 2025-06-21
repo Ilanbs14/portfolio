@@ -1,52 +1,61 @@
+// particles-config.js
 tsParticles.load("particles-js", {
   particles: {
     number: {
-      value: 80,
+      value: 100,  // Nombre de particules
       density: {
         enable: true,
-        area: 800
+        value_area: 800  // Zone d'affichage des particules
       }
     },
-    color: {
-      value: "#26ecd1"
-    },
     shape: {
-      type: "circle"
+      type: "circle",  // Forme des particules
     },
     opacity: {
-      value: 0.5
+      value: 0.5,  // Opacité des particules
+      random: true,
+      animation: {
+        enable: true,
+        speed: 1,
+        minimumValue: 0.1
+      }
     },
     size: {
-      value: 3
+      value: 3,  // Taille des particules
+      random: true,
+      animation: {
+        enable: true,
+        speed: 4,
+        minimumValue: 0.1
+      }
+    },
+    links: {
+      enable: true,
+      distance: 150,
+      opacity: 0.5,
+      width: 1
     },
     move: {
       enable: true,
-      speed: 1
+      speed: 2,
+      direction: "none",
+      random: true,
+      straight: false,
+      outModes: {
+        default: "out"
+      }
     }
   },
   interactivity: {
     events: {
       onhover: {
         enable: true,
-        mode: "repulse"
-      }
-    },
-    modes: {
-      repulse: {
-        distance: 100
+        mode: "repulse"  // Effet de répulsion des particules au survol
+      },
+      onclick: {
+        enable: true,
+        mode: "push"  // Effet de "push" au clic
       }
     }
-  },
-  background: {
-    color: "#1a4498"
-  },
-  style: {
-    position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        zIndex: -1, 
-        pointerEvents: 'none' 
   }
 });
