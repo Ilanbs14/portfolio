@@ -40,7 +40,7 @@ tsParticles.load("particles-js", {
             events: {
                 onhover: {
                     enable: true,
-                    mode: "repulse"
+                    mode: "grab"
                 },
                 onclick: {
                     enable: true,
@@ -52,7 +52,7 @@ tsParticles.load("particles-js", {
                     distance: 30
                 },
                 push: {
-                    quantity: 4
+                    quantity: 5
                 }
             }
         },
