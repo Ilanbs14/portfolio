@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 	background : #b3e9fe;
+	z-index : 1;
 }
 
 header h1 {
@@ -120,9 +121,10 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    background-color: #0e0e0e;
+    z-index: 0; /* Plus bas que les autres contenus */
+    pointer-events: none; 
 }
+
 
 .info i {
 	font-size : 22px;
