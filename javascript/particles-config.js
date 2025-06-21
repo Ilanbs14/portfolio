@@ -4,14 +4,14 @@ tsParticles.load("particles-js", {
         },
         particles: {
             number: {
-                value: 100,
+                value: 400,
                 density: {
                     enable: true,
                     value_area: 800
                 }
             },
             color: {
-                value: "#26ecd1"
+                value: ["#26ecd1", "#ff6b6b", "#feca57"]
             },
             shape: {
                 type: "circle"
@@ -20,7 +20,10 @@ tsParticles.load("particles-js", {
                 value: 0.5
             },
             size: {
-                value: 3
+                value: { min: 2, max: 8 }, // tailles variées
+                random: {
+                    enable: true
+                }
             },
             move: {
                 enable: true,
@@ -42,7 +45,7 @@ tsParticles.load("particles-js", {
             },
             modes: {
                 repulse: {
-                    distance: 80
+                    distance: 30
                 },
                 push: {
                     quantity: 4

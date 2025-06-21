@@ -50,7 +50,7 @@ main {
 	padding : 15px;
 	background : white;
 	text-align : center;
-	background : #CCE9F5;
+	background : #84c0d8;
 	max-width : 300px;
 	border-radius : 20px;
 }
@@ -168,7 +168,7 @@ canvas.tsparticles-canvas-el {
     overflow-y: auto;
     height: 100vh;
     padding: 20px;
-	background : #CCE9F5;
+	background : #84c0d8;
 	border : 2px solid black;
 	border-radius : 20px;
     scrollbar-width: none; /* Masquer la scrollbar (Firefox) */
@@ -200,7 +200,7 @@ canvas.tsparticles-canvas-el {
     border-radius: 20px;
     width: 90%;
     padding: 15px 0;
-    background: #CCE9F5;
+    background: #84c0d8;
     display: flex;
     justify-content: center;
 }
