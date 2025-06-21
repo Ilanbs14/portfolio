@@ -4,14 +4,14 @@ tsParticles.load("particles-js", {
         },
         particles: {
             number: {
-                value: 60,
+                value: 100,
                 density: {
                     enable: true,
                     value_area: 800
                 }
             },
             color: {
-                value: "#ffffff"
+                value: "#26ecd1"
             },
             shape: {
                 type: "circle"
@@ -20,11 +20,11 @@ tsParticles.load("particles-js", {
                 value: 0.5
             },
             size: {
-                value: 2
+                value: 3
             },
             move: {
                 enable: true,
-                speed: 0.6,
+                speed: 0.7,
                 direction: "none",
                 out_mode: "out"
             }
@@ -48,6 +48,9 @@ tsParticles.load("particles-js", {
                     quantity: 4
                 }
             }
+        },
+        background: {
+            color: "#1a4498"
         },
         detectRetina: true
     });
