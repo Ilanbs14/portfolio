@@ -8,7 +8,7 @@ tsParticles.load("particles-js", {
       }
     },
     color: {
-      value: "#ffffff"
+      value: "#26ecd1"
     },
     shape: {
       type: "circle"
@@ -38,6 +38,15 @@ tsParticles.load("particles-js", {
     }
   },
   background: {
-    color: "#0e0e0e"
+    color: "#1a4498"
+  },
+  style: {
+    position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        zIndex: -1, 
+        pointerEvents: 'none' 
   }
 });
