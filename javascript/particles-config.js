@@ -1,11 +1,21 @@
-tsParticles.addInitializer("customDirection", (container) => {
-    const particles = container.particles.array;
-
-    for (const p of particles) {
-        const dir = Math.random() < 0.5 ? "right" : "bottom-right";
-        p.direction = container.retina.reduceFactor ? dir : dir;
+const customDirectionPlugin = {
+    id: "custom-direction",
+    async init(container) {
+        container.particles.addUpdater("custom-direction", {
+            init(particle) {
+                // Choisit une direction aléatoire à l'initialisation de chaque particule
+                particle.moveDirection = Math.random() < 0.5 ? "right" : "bottom-right";
+            },
+            isEnabled() {
+                return true;
+            },
+            update() {}
+        });
     }
-});
+};
+
+tsParticles.addPlugin(customDirectionPlugin);
+
 
 tsParticles.load("particles-js", {
         fullScreen: {
