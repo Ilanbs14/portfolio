@@ -126,6 +126,9 @@ main {
     pointer-events: none; /* Pour que ça ne gêne pas les clics */
 }
 
+canvas.tsparticles-canvas-el {
+    position: absolute !important;
+}
 
 .info i {
 	font-size : 22px;

@@ -1,4 +1,7 @@
 tsParticles.load("particles-js", {
+        fullScreen: {
+            enable: false
+        },
         particles: {
             number: {
                 value: 60,
@@ -8,7 +11,7 @@ tsParticles.load("particles-js", {
                 }
             },
             color: {
-                value: "#26ecd1"
+                value: "#ffffff"
             },
             shape: {
                 type: "circle"
@@ -17,11 +20,11 @@ tsParticles.load("particles-js", {
                 value: 0.5
             },
             size: {
-                value: 3
+                value: 2
             },
             move: {
                 enable: true,
-                speed: 1,
+                speed: 0.6,
                 direction: "none",
                 out_mode: "out"
             }
@@ -39,19 +42,12 @@ tsParticles.load("particles-js", {
             },
             modes: {
                 repulse: {
-                    distance: 100
+                    distance: 80
                 },
                 push: {
                     quantity: 4
                 }
             }
         },
-        background: {
-            color: {
-                value: "#1a4498" // couleur de fond du canvas si tu veux le contrôler
-            }
-        },
-        fullScreen: {
-            enable: false // important pour garder dans le div #particles-js
-        }
+        detectRetina: true
     });
