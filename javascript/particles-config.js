@@ -1,3 +1,12 @@
+tsParticles.addInitializer("customDirection", (container) => {
+    const particles = container.particles.array;
+
+    for (const p of particles) {
+        const dir = Math.random() < 0.5 ? "right" : "bottom-right";
+        p.direction = container.retina.reduceFactor ? dir : dir;
+    }
+});
+
 tsParticles.load("particles-js", {
         fullScreen: {
             enable: false
@@ -31,8 +40,8 @@ tsParticles.load("particles-js", {
             },
             move: {
                 enable: true,
-                speed: { min : 0.5, max : 1.5},
-                direction: ["right", "bottom-right"],
+                speed: { min : 0.5, max : 2},
+                direction: "none",
                 out_mode: "out"
             }
         },
@@ -55,9 +64,6 @@ tsParticles.load("particles-js", {
                     quantity: 5
                 }
             }
-        },
-        background: {
-            color: "#1a4498"
         },
         detectRetina: true
     });
