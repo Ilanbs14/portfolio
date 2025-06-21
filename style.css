@@ -115,14 +115,15 @@ main {
 	cursor : pointer;
 }
 
-.particles-js {
-    position: fixed ;
-    top: 0 ;
-    left: 0 ;
-    width: 100% ;
-    height: 100% ;
-    z-index: -1 ; 
-    pointer-events: none;
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: #000; /* ou transparent, selon ton choix */
+    pointer-events: none; /* Pour que ça ne gêne pas les clics */
 }
 
 
