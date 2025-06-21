@@ -11,10 +11,14 @@ tsParticles.load("particles-js", {
                 }
             },
             color: {
-                value: ["#26ecd1", "#ff6b6b", "#feca57"]
+                value: ["#26ecd1", "#cef1ff", "#1d2c32"]
             },
             shape: {
-                type: "circle"
+                type: "circle",
+                stroke: {
+                    width : 1,
+                    color : white
+                }
             },
             opacity: {
                 value: 0.5
@@ -44,7 +48,7 @@ tsParticles.load("particles-js", {
                 }
             },
             modes: {
-                repulse: {
+                grab: {
                     distance: 30
                 },
                 push: {
