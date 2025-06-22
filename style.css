@@ -47,7 +47,7 @@ main {
 .profil {
 	position : sticky;
 	left :0;
-	border : 2px solid;
+	border : 1px solid white;
 	position : relative;
 	padding : 15px;
 	background : white;
@@ -171,7 +171,7 @@ canvas.tsparticles-canvas-el {
     height: 100vh;
     padding: 20px;
 	background : #84c0d8;
-	border : 2px solid black;
+	border : 1px solid white;
 	border-radius : 20px;
     scrollbar-width: none; /* Masquer la scrollbar (Firefox) */
     -ms-overflow-style: none; /* Masquer la scrollbar (IE/Edge) */
@@ -198,7 +198,7 @@ canvas.tsparticles-canvas-el {
     position: sticky;
     top: 20px;
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid white;
     border-radius: 20px;
     width: 90%;
     padding: 15px 0;

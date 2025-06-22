@@ -3,7 +3,7 @@
       detectRetina: true,
       particles: {
         number: {
-          value: 400,
+          value: 360,
           density: { enable: true, value_area: 800 }
         },
         color: { value: ["#171515", "#cef1ff", "#1d2c32"] },
