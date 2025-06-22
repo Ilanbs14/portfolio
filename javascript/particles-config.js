@@ -17,6 +17,10 @@
           enable: true,
           speed: { min: 0.5, max: 2 },
           direction: "none",  // direction libre pour un vecteur manuel
+          angle: {
+            value : [0, 45],
+            offset : 0
+          },
           out_mode: "out"
         }
       },
@@ -29,17 +33,4 @@
           grab: { distance: 60 },
           push: { quantity: 5 }
         }
-      },
-      // Voici le callback qui fixe la direction au moment de création
-      i: {
-        onParticleCreated: (particle) => {
-          const angle = Math.random() < 0.5
-            ? 0 // 0° = vers la droite
-            : Math.PI / 4; // 45° = bas-droite
-
-          const speed = particle.move.speed;
-          particle.velocity.horizontal = Math.cos(angle) * speed;
-          particle.velocity.vertical = Math.sin(angle) * speed;
-        }
-      }
-    });
+      }});
