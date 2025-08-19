@@ -106,7 +106,7 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
         // Récupérer les données du formulaire
         const formData = new FormData(event.target);
 
-        fetch("https://www.formsumbit.co/luisilonald14@gmail.com", {
+        fetch("https://www.formsubmit.co/luisilonald14@gmail.com", {
             method: "POST",
             body: formData
         })
@@ -166,3 +166,4 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 
     // Appel de la fonction dès le chargement de la page
     window.onload = afficherCitationDuJour;
+
