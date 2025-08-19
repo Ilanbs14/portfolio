@@ -225,6 +225,11 @@
 	object-fit: cover;
 	border-radius: 8px;
 	border : 1px solid black;
+	transition: box-shadow 0.3s ease;
+}
+
+.projet img:hover {
+	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .projet p {
@@ -287,4 +292,5 @@
 
 .infosProjet tr:nth-child(odd) {
   background-color: #ffffff;
+
 }
