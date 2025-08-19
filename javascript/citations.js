@@ -106,28 +106,31 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
         // Récupérer les données du formulaire
         const formData = new FormData(event.target);
 
-        fetch("https://www.formsubmit.co/luisilonald14@gmail.com", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                // Si l'envoi est réussi, afficher la notification de succès
-                afficherNotification();
-                event.target.reset();
-                document.getElementById("citationFormContainer").style.display = "none";
+		fetch("https://formsubmit.co/ajax/luisilonald14@gmail.com", {
+		    method: "POST",
+		    body: formData,
+		    headers: {
+		        "Accept": "application/json"
+		    }
+		})
+		.then(response => response.json())
+		.then(data => {
+		    console.log("Réponse FormSubmit:", data);
+		    if (data.success === "true") {
+		        afficherNotification();
+		        event.target.reset();
+		        document.getElementById("citationFormContainer").style.display = "none";
 		        const couleurQuestion = document.getElementById("toggleCitationForm");
 		        couleurQuestion.style.color = 'green';
-                formulaireEnvoye = true;
-
-            } else {
-                alert("Erreur lors de l'envoi de la citation. Veuillez réessayer.");
-            }
-        })
-        .catch(error => {
-            console.error("Erreur:", error);
-            alert("Une erreur est survenue.");
-        });
+		        formulaireEnvoye = true;
+		    } else {
+		        alert("Erreur lors de l'envoi : " + data.message);
+		    }
+		})
+		.catch(error => {
+		    console.error("Erreur:", error);
+		    alert("Une erreur est survenue (fetch).");
+		});
     });
 	
 	function mettreEnMajuscule(event) {
@@ -166,4 +169,5 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 
     // Appel de la fonction dès le chargement de la page
     window.onload = afficherCitationDuJour;
+
 
