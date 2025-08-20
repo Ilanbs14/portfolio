@@ -1,12 +1,11 @@
-.annonce {
-  background: #f9fafb; /* gris très clair */
-  border-radius: 1rem;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-family: "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
+.annonces {
+	background-color : #eae5e5;
+	border-radius : 10px;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 10px;
+	border : 2px dashed black;
+	margin-bottom : 4px;
 }
 
 .annonces p {
