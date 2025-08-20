@@ -13,10 +13,9 @@
 	margin-top : 20px;
 }
 
-.rechercheAlternance {
+.titreAnnonce {
 	font-size : 14px;
 	color : black;
-	background-color : #ff2929;
 	display : inline-block;
 	padding : 4px;
 	border-radius : 8px;
@@ -24,15 +23,12 @@
 	border : 1px solid black;
 }
 
-.alternanceTrouvee {
-	font-size : 14px;
-	color : black;
-	background-color : #00ff4c;
-	display : inline-block;
-	padding : 4px;
-	border-radius : 8px;
-	margin-left : 3px;
-	border : 1px solid black;
+.backgroundRed {
+	background-color : #ff2929;
+}
+
+.backgroundGreen {
+  background-color : #00ff4c;
 }
 
 .missions {
@@ -46,9 +42,15 @@
   color: #1f2937;
 }
 
-.infosImportantes {
+.soulignage {
   text-decoration: underline;
-  text-align : left;
+}
+
+.annonces .logoAg2r {
+  text-align: right;
+  width : 62.5px;
+  height : 24.25px;
+  margin : 15px;
 }
 
 /* Animation légère à l'apparition */
