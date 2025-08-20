@@ -6,6 +6,7 @@
 	padding-top : 10px;
 	border : 2px dashed black;
 	margin-bottom : 5px;
+  overflow: auto;
 }
 
 .annonces p {
