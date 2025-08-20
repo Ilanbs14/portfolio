@@ -46,11 +46,14 @@
   text-decoration: underline;
 }
 
-.annonces .logoAg2r {
+.logoAg2r {
   text-align: right;
-  width : 62.5px;
-  height : 24.25px;
-  margin : 15px;
+  margin-top: 15px;
+}
+
+.logoAg2r img {
+  max-width: 120px;
+  height: auto;
 }
 
 /* Animation légère à l'apparition */
