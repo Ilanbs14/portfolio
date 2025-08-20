@@ -13,7 +13,7 @@
 	margin-top : 20px;
 }
 
-.themeAnnonce {
+.rechercheAlternance {
 	font-size : 14px;
 	color : black;
 	background-color : #ff2929;
@@ -24,6 +24,45 @@
 	border : 1px solid black;
 }
 
+.alternanceTrouvee {
+	font-size : 14px;
+	color : black;
+	background-color : #00ff4c;
+	display : inline-block;
+	padding : 4px;
+	border-radius : 8px;
+	margin-left : 3px;
+	border : 1px solid black;
+}
+
+.missions, .infos {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.missions li, .infos li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.infos li strong {
+  color: #2563eb; /* bleu accent */
+}
+
+/* Animation légère à l'apparition */
+.annonce {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .citation-du-jour p {
     font-style: italic;
