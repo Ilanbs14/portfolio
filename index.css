@@ -12,7 +12,8 @@
 
 .annonces p {
 	text-align : center;
-	margin-top : 20px;
+	margin-right : 20px;
+	margin-left : 20px;
 }
 
 .titreAnnonce {
@@ -23,6 +24,7 @@
 	border-radius : 8px;
 	margin-left : 3px;
 	border : 1px solid black;
+	margin-bottom : 20px;
 }
 
 .backgroundRed {
@@ -341,6 +343,7 @@
   background-color: #ffffff;
 
 }
+
 
 
 
