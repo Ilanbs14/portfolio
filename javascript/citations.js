@@ -21,34 +21,34 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
         "Les meilleures idées naissent souvent dans le chaos. – Steve Jobs",
         "Un programmeur qui se contente de coder ne sera jamais un bon développeur. – Martin Fowler",
         "L’information n’a de valeur que lorsqu’elle est comprise. – Albert Einstein",
-        "Le développement est un voyage, pas une destination. – Unknown",
+        "Le développement est un voyage, pas une destination.",
         "L’innovation est ce qui distingue un leader d’un suiveur. – Steve Jobs",
-        "Le plus grand danger dans le développement logiciel, c’est de croire que tout est sous contrôle. – Unknown",
-        "Il n’y a pas de problème que la technologie ne puisse résoudre, mais parfois elle en crée de nouveaux. – Unknown",
-        "Le logiciel est un mélange de science et d’art. – Unknown",
-        "Celui qui n’essaie jamais ne fera jamais d’erreur. Mais celui qui n'essaie jamais ne réussira jamais non plus. – Unknown",
+        "Le plus grand danger dans le développement logiciel, c’est de croire que tout est sous contrôle.",
+        "Il n’y a pas de problème que la technologie ne puisse résoudre, mais parfois elle en crée de nouveaux.",
+        "Le logiciel est un mélange de science et d’art.",
+        "Celui qui n’essaie jamais ne fera jamais d’erreur. Mais celui qui n'essaie jamais ne réussira jamais non plus.",
         "Rien n'est aussi puissant qu'une idée dont le temps est venu. – Victor Hugo",
-        "Les ordinateurs ne peuvent pas mentir. Mais les programmes peuvent, eux. – Unknown",
+        "Les ordinateurs ne peuvent pas mentir. Mais les programmes peuvent, eux.",
         "Tout le monde est un génie. Mais si vous jugez un poisson sur sa capacité à grimper à un arbre, il passera sa vie à croire qu’il est stupide. – Albert Einstein",
-        "Un bon développeur ne résout pas simplement des problèmes, il en crée. – Unknown",
-        "Le développement logiciel n’est pas une science, c’est une discipline. – Unknown",
-        "L’information est la nouvelle monnaie, et nous devons savoir l’utiliser correctement. – Unknown",
+        "Un bon développeur ne résout pas simplement des problèmes, il en crée.",
+        "Le développement logiciel n’est pas une science, c’est une discipline.",
+        "L’information est la nouvelle monnaie, et nous devons savoir l’utiliser correctement.",
         "Les erreurs sont les portes de la découverte. – James Joyce",
         "Le code est comme de l'humour. Quand il faut l'expliquer, c'est qu’il est mauvais. – Cory House",
-        "L'informatique est trop importante pour la confier uniquement aux informaticiens. – Unknown",
-        "L’intelligence artificielle est l'ultime artifice, mais l'humain reste l'ultime créateur. – Unknown",
-        "Le code est poésie. – Unknown",
+        "L'informatique est trop importante pour la confier uniquement aux informaticiens.",
+        "L’intelligence artificielle est l'ultime artifice, mais l'humain reste l'ultime créateur.",
+        "Le code est poésie.",
         "Un problème bien posé est à moitié résolu. – Charles Kettering",
-        "Le plus grand ennemi de l’innovation n’est pas la technologie, c’est la peur de l’échec. – Unknown",
-        "Programmer, c’est comme résoudre des puzzles. C’est une recherche incessante de solutions. – Unknown",
-        "Un programme bien écrit est un poème que seule une machine peut lire. – Unknown",
+        "Le plus grand ennemi de l’innovation n’est pas la technologie, c’est la peur de l’échec.",
+        "Programmer, c’est comme résoudre des puzzles. C’est une recherche incessante de solutions.",
+        "Un programme bien écrit est un poème que seule une machine peut lire.",
         "Rien ne se perd, rien ne se crée, tout se transforme... même le code. – Antoine Lavoisier (adapté)",
-        "Un bon code est comme un bon vin, il se bonifie avec le temps. – Unknown",
+        "Un bon code est comme un bon vin, il se bonifie avec le temps.",
         "Si vous ne pouvez pas l'expliquer simplement, vous ne le comprenez pas assez bien. – Albert Einstein",
-        "La programmation n’est pas juste un métier, c’est un mode de pensée. – Unknown",
+        "La programmation n’est pas juste un métier, c’est un mode de pensée.",
         "L’erreur n’est pas de tomber, mais de rester à terre. – John Bunyan",
-        "La technologie est un outil. Les idées qui l’accompagnent sont celles qui font la différence. – Unknown",
-        "En développement, chaque ligne de code est une conversation entre le développeur et la machine. – Unknown"
+        "La technologie est un outil. Les idées qui l’accompagnent sont celles qui font la différence.",
+        "En développement, chaque ligne de code est une conversation entre le développeur et la machine."
     ];
 
     // Fonction pour afficher la citation du jour
@@ -169,5 +169,6 @@ document.getElementById("toggleCitationForm").addEventListener("click", function
 
     // Appel de la fonction dès le chargement de la page
     window.onload = afficherCitationDuJour;
+
 
 
