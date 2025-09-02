@@ -6,8 +6,11 @@
 	padding-top : 10px;
 	border : 2px dashed black;
 	margin-bottom : 5px;
-	font-size : 10px;
+	font-size : 12px;
   overflow: auto;
+}
+.annonces li {
+	font-size : 12px;
 }
 
 .annonces p {
@@ -341,4 +344,5 @@
   background-color: #ffffff;
 
 }
+
 
