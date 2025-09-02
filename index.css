@@ -6,11 +6,8 @@
 	padding-top : 10px;
 	border : 2px dashed black;
 	margin-bottom : 5px;
-	font-size : 12px;
+	font-size : 13px;
   overflow: auto;
-}
-.annonces li {
-	font-size : 12px;
 }
 
 .annonces p {
@@ -43,7 +40,7 @@
 
 .missions li{
   margin-bottom: 0.6rem;
-  font-size: 15px;
+  font-size: 13px;
   color: #1f2937;
 }
 
@@ -344,5 +341,6 @@
   background-color: #ffffff;
 
 }
+
 
 
