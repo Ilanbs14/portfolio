@@ -10,7 +10,7 @@ header h1 {
 	text-align : left;
 	margin-left : 3rem;
 	margin-top : 2rem;
-	margin-bottom : 3rem;
+	margin-bottom : 1rem;
 	margin-right : 5rem;
 	color : white;
 }
@@ -334,3 +334,4 @@ footer {
 		align-items : center;
 	}
 }
+
