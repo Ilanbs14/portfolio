@@ -1,243 +1,797 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Portfolio de Ilan Luis, étudiant à l'IUT d'Orsay passionné par le développement informatique. Découvrez ses projets en C++, C#, et plus encore, ainsi que ses recherches d'alternance en Île-de-France pour 2025-2027.">
-    <title>Portfolio - Ilan Luis</title>
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="index.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio d'Ilan Luis, apprenti développeur Salesforce chez AG2R LA MONDIALE et étudiant en 3e année de BUT Informatique à l'IUT d'Orsay. Projets web, jeux, compétences et parcours.">
+	<meta name="theme-color" content="#0b0d14">
+	<title>Ilan Luis — Développeur Salesforce</title>
+	<link rel="canonical" href="https://ilanbs14.github.io/portfolio/">
+	<link rel="icon" href="./Images-general/favicon-32.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="./Images-general/icon-192.png" type="image/png" sizes="192x192">
+	<link rel="apple-touch-icon" href="./Images-general/apple-touch-icon.png">
+
+	<!-- Aperçu de lien (LinkedIn, WhatsApp, Discord, X…) -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="Ilan Luis — Portfolio">
+	<meta property="og:title" content="Ilan Luis — Développeur Salesforce">
+	<meta property="og:description" content="Apprenti développeur Salesforce chez AG2R LA MONDIALE et étudiant en BUT Informatique à l'IUT d'Orsay. Découvrez mes projets, mes compétences et mon parcours.">
+	<meta property="og:url" content="https://ilanbs14.github.io/portfolio/">
+	<meta property="og:image" content="https://ilanbs14.github.io/portfolio/Images-general/og-image.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Ilan Luis, développeur Salesforce">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Ilan Luis — Développeur Salesforce">
+	<meta name="twitter:description" content="Apprenti développeur Salesforce chez AG2R LA MONDIALE et étudiant en BUT Informatique à l'IUT d'Orsay.">
+	<meta name="twitter:image" content="https://ilanbs14.github.io/portfolio/Images-general/og-image.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-	<link rel="icon" href="./Images-general/icone-site.jpg" type="image/jpg">
+	<link rel="stylesheet" href="style.css">
+	<script>
+		// Applique le thème avant l'affichage pour éviter le flash
+		(function () {
+			document.documentElement.classList.add('js');
+			try {
+				const theme = localStorage.getItem('theme');
+				if (theme) document.documentElement.dataset.theme = theme;
+			} catch (e) {}
+		})();
+	</script>
 </head>
 <body>
 
-	<div id="particles-js"></div>
-    <header>
-        <h1> PORTFOLIO DE ILAN LUIS </h1>
-		<button class="menu-toggle" onclick="toggleMenu()" aria-label="Bouton de navigation pour les petits écrans">
-			<i class="fa fa-bars fa-2x"></i>
-		</button>		
-    </header>
-	
-	<main>
-		<section class="profil">
-			<img src="./Images-general/pdp.jpg" class="imageProtegee" alt="Photo de Ilan Luis">
-			<p class="titreProfil"> Ilan LUIS </p>
-			<div class="text-description">
-				<p> Etudiant en deuxième année à l'IUT d'Orsay, je suis passionné par la programmation et le développement informatique</p>
+	<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+	<header class="site-header" id="header">
+		<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+		<div class="container header-inner">
+			<a href="#accueil" class="logo" aria-label="Retour en haut de page">
+				<span class="logo-mark">IL</span>
+				<span class="logo-text">Ilan Luis</span>
+			</a>
+
+			<nav class="nav" id="nav" aria-label="Navigation principale">
+				<ul>
+					<li><a href="#experience">Expérience</a></li>
+					<li><a href="#projets">Projets</a></li>
+					<li><a href="#competences">Compétences</a></li>
+					<li><a href="#parcours">Parcours</a></li>
+					<li><a href="#a-propos">À propos</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<a href="./CV_Ilan_LUIS.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cv">
+					<i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Mon CV
+				</a>
+			</nav>
+
+			<div class="header-actions">
+				<button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">
+					<i class="fa-solid fa-moon icon-dark" aria-hidden="true"></i>
+					<i class="fa-solid fa-sun icon-light" aria-hidden="true"></i>
+				</button>
+				<button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+					<span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+				</button>
 			</div>
-			<hr>
-			<div class="titreContact">
-				<p>Coordonnées </p>
-			</div>
-			<div class="contacts">
-				<div class="info">
-					<a href="https://www.linkedin.com/in/ilan-luis/" aria-label="Redirection vers mon linkedin" target="_blank">
-						<i class="fa-brands fa-linkedin"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank"> linkedin.com/in/ilan-luis</a>
-				</div>
-				<hr>
-				<div class="info">
-					<a href="https://github.com/Ilanbs14" aria-label="Redirection vers mon github" target="_blank">
-						<i class="fa-brands fa-github"></i>
-					</a>
-					<a href="https://github.com/Ilanbs14" target="_blank"> github.com/ilanbs14</a>
-				</div>
-				<hr>
-				<div class="info" data-copy>
-					<i class="fa fa-envelope"></i> luisilonald14@gmail.com
-				</div>
-				<hr>
-				<div class="info" data-copy>
-					<i class="fa fa-phone"></i>07.67.27.87.18
+		</div>
+	</header>
+
+	<main id="contenu">
+
+		<!-- ===== Accueil ===== -->
+		<section class="hero" id="accueil">
+			<div class="container hero-inner">
+				<div class="hero-text reveal">
+					<span class="badge">
+						<span class="pulse" aria-hidden="true"></span>
+						Apprenti chez AG2R LA MONDIALE
+					</span>
+					<h1>
+						Ilan Luis<br>
+						<span class="gradient-text">Développeur Salesforce</span>
+					</h1>
+					<p class="lead">
+						Étudiant en <strong>3<sup>e</sup> année de BUT Informatique</strong> à l'IUT d'Orsay et en
+						<strong>2<sup>e</sup> année d'alternance</strong>. Je conçois des solutions sur Salesforce au sein
+						d'une équipe Scrum et je crée mes propres projets web à côté.
+					</p>
+					<div class="hero-actions">
+						<a href="#projets" class="btn btn-primary">Voir mes projets <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+						<a href="#contact" class="btn btn-ghost">Me contacter</a>
+					</div>
+					<ul class="socials" aria-label="Réseaux">
+						<li><a href="https://www.linkedin.com/in/ilan-luis/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+						<li><a href="https://github.com/Ilanbs14" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+						<li><a href="mailto:luisilonald14@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a></li>
+					</ul>
 				</div>
 
-				<!-- Conteneur pour le toast -->
-				<div id="copy-toast">Copié !</div>
+				<div class="hero-visual reveal" data-reveal="zoom">
+					<div class="portrait">
+						<img src="./Images-general/pdp.webp" alt="Photo d'Ilan Luis" width="320" height="320" class="protected" draggable="false">
+					</div>
+					<span class="float-chip chip-1"><img src="Images-general/salesforce.webp" alt=""> Salesforce</span>
+					<span class="float-chip chip-2"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Scrum</span>
+					<span class="float-chip chip-3"><i class="fa-solid fa-code" aria-hidden="true"></i> Web</span>
+				</div>
 			</div>
-			
-			<div class="voirCv">
-				<a href="./CV_Ilan_LUIS.pdf" target="_blank"> Voir mon CV </a>
+
+			<div class="container">
+				<ul class="stats stagger">
+					<li><strong>1 an+</strong><span>d'expérience sur Salesforce</span></li>
+					<li><strong>BUT 3</strong><span>Informatique · IUT d'Orsay</span></li>
+					<li><strong>7</strong><span>projets réalisés</span></li>
+				</ul>
 			</div>
 		</section>
-		
-		<section class="content">
-			<div class="titreContent">
-				<p>Annonces</p>
-			</div>
-			<hr>
-			<section class="annonces">
-				<div class="titreAnnonce backgroundGreen">🎉 Alternance trouvée</div>
-				
-				<p>
-					Après plusieurs mois de recherche et de nombreuses candidatures envoyées, 
-					j’ai finalement trouvé mon alternance.
-				</p>
-				<p>
-					C’est l’entreprise chez laquelle j’ai passé mon premier entretien qui a retenu 
-					ma candidature et qui m’accueillera pour les deux prochaines années.
-				</p>
-				<p>
-					À partir du <strong>3 septembre 2025</strong>, j’occuperai le poste d’<strong>apprenti 
-					concepteur/développeur Fullstack</strong> chez <strong>AG2R La Mondiale</strong>.
-				</p>
 
-				<p>
-					<span class="soulignage">Missions principales</span></div> :
-				</p>
+		<!-- ===== Expérience ===== -->
+		<section class="section" id="experience">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Expérience</p>
+					<h2>Mon expérience professionnelle</h2>
+				</header>
 
-				<ul class="missions">
-				<li>Concevoir, paramétrer et développer des solutions adaptées aux besoins des clients, dans le respect des performances et de la qualité.</li>
-				<li>Optimiser l’expérience utilisateur en respectant les bonnes pratiques.</li>
-				<li>Évoluer au sein d’une équipe collaborative dans un environnement stimulant.</li>
-				<li>Apprendre et approfondir les technologies web : Apex, Java, JEE, SOQL, JavaScript, HTML, CSS.</li>
-				<li>Analyser les besoins fonctionnels des clients et proposer des solutions techniques adaptées.</li>
-				<li>Communiquer efficacement, tant à l’oral qu’à l’écrit.</li>
-				</ul>
-				
-				<div class="logoAg2r">
-					<img src="./Images-index/ag2r-logo.png" alt="Logo AG2R La Mondiale">
-				</div>
-			</section> 
-			
-			
-			<div class="titreContent">
-				<p>La citation du jour</p>
-			</div>
-			<div class="citation-du-jour"><hr>
-				<p id="citationdujour"></p>
-			</div>
-			<section class="formulaire-citation">
-				<h2 id="toggleCitationForm">Proposez votre propre citation</h2> 
-				
-				<!-- Formulaire caché par défaut -->
-				<div id="citationFormContainer" style="display: none;">
-					<form id="citationForm" >
-						<label for="nom">Nom :</label>
-						<input type="text" id="nom" name="nom" placeholder="NOM" required><br>
-						
-						<label for="prenom">Prénom :</label>
-						<input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
-
-						<label for="citation">Votre citation: </label>
-						<textarea id="citation" name="citation" rows="4" required></textarea><br>
-						
-						<label for="auteur">Auteur de la citation : </label>
-						<input type="text" id="auteur" name="auteur" placeholder="Inconnu" ><br>
-						
-						<input type="hidden" name="_subject" value="Nouvelle proposition de citation">
-						<input type="hidden" name="_redirect" value="">
-						
-						<button type="submit">Envoyer ma citation</button>
-					</form>
-				</div>
-			</section>
-
-			
-			
-			<div class="titreContent">
-				<p>Mes derniers projets</p>
-			</div>
-			<hr>
-			<section class="projets">
-				<div class="liste-projets">
-					
-					<div class="projet">
-						<a href="projets.html#supercell-gift" class="lien-projet" aria-label="Redirection vers le projet correspondant">
-							<img src="./Images-index/supercell-gift.png" alt="Dernier projet">
-						</a>
-						<p class="texteAdapte titreProjet">Site web</p>
-						<table class="infosProjet">
-							<tr><td>Langage</td><td>Html/CSS/JS</td></tr>
-							<tr><td>Date</td><td>Octobre 2025</td></tr>
-							<tr><td>Participation</td><td>Solo</td></tr>
-							<tr><td>Type</td><td>Projet personnel</td></tr>
-						</table>
+				<div class="experiences stagger">
+				<article class="card experience reveal" id="alternance">
+					<div class="experience-head">
+						<div class="company-logo">
+							<img src="./Images-index/ag2r-logo.webp" alt="Logo AG2R LA MONDIALE" width="250" height="97">
+						</div>
+						<div>
+							<h3>Apprenti développeur Salesforce</h3>
+							<p class="muted">AG2R LA MONDIALE · Depuis septembre 2025 · 2<sup>e</sup> année d'alternance</p>
+						</div>
+						<span class="tag tag-live">En poste</span>
 					</div>
 
-					<div class="projet">
-						<a href="projets.html#demineur" class="lien-projet" aria-label="Redirection vers le projet correspondant">
-							<img src="./Images-index/demineur.png" alt="Avant dernier projet">
-						</a>
-						<p class="texteAdapte titreProjet">Jeu démineur</p>
-						<table class="infosProjet">
-							<tr><td>Langage</td><td>C#/XAML</td></tr>
-							<tr><td>Date</td><td>Mai 2025</td></tr>
-							<tr><td>Participation</td><td>Solo</td></tr>
-							<tr><td>Type</td><td>Projet scolaire</td></tr>
-						</table>
+					<p>
+						Depuis plus d'un an, je développe et fais évoluer des solutions sur la plateforme <strong>Salesforce</strong>,
+						que j'ai appris à maîtriser au fil des sprints. Je fais partie d'une <strong>équipe Scrum</strong> :
+						planification de sprint, daily, revues et rétrospectives rythment notre quotidien.
+					</p>
+
+					<ul class="checklist">
+						<li>Concevoir, paramétrer et développer des fonctionnalités Salesforce adaptées aux besoins métier.</li>
+						<li>Analyser les besoins fonctionnels et proposer des solutions techniques adaptées.</li>
+						<li>Travailler en méthode agile au sein d'une équipe Scrum pluridisciplinaire.</li>
+						<li>Soigner la qualité, la performance et l'expérience utilisateur des solutions livrées.</li>
+						<li>Communiquer clairement avec l'équipe et les métiers, à l'oral comme à l'écrit.</li>
+					</ul>
+
+					<ul class="tags" aria-label="Technologies">
+						<li class="tag">Salesforce</li>
+						<li class="tag">Apex</li>
+						<li class="tag">SOQL</li>
+						<li class="tag">JavaScript</li>
+						<li class="tag">Scrum</li>
+					</ul>
+				</article>
+
+				<article class="card experience reveal" id="auto-entrepreneur">
+					<div class="experience-head">
+						<div class="company-logo company-app">
+							<img src="./Images-index/dealabs-logo.png" alt="Logo Dealabs" width="152" height="152">
+						</div>
+						<div>
+							<h3>Auto-entrepreneur · Chasseur de bons plans</h3>
+							<p class="muted">Dealabs · Depuis août 2026 · En parallèle de mon alternance</p>
+						</div>
+						<span class="tag tag-live">En activité</span>
 					</div>
-					
-					<a href="projets.html" class="lien-projet" aria-label="Redirection vers la page des projets">
-						<div class="voirPlus">
-							<div class="cerclePlus">
-								<i class="fa fa-plus fa-6x"></i>
+
+					<p>
+						En parallèle de mes études, je suis <strong>auto-entrepreneur</strong> : je repère des produits
+						vendus en ligne à prix cassé et je les publie sous forme de deals sur <strong>Dealabs</strong>.
+						Je suis rémunéré grâce aux <strong>revenus publicitaires</strong> générés par mes publications.
+					</p>
+
+					<ul class="checklist">
+						<li>Faire une veille quotidienne des offres et des baisses de prix sur les sites marchands.</li>
+						<li>M'appuyer sur des outils informatiques pour détecter plus vite les bonnes affaires.</li>
+						<li>Rédiger des deals clairs et vérifiés pour la communauté Dealabs.</li>
+						<li>Développer mon propre <strong>tracker de prix</strong> pour automatiser la détection (en cours).</li>
+					</ul>
+
+					<ul class="tags" aria-label="Compétences">
+						<li class="tag">Veille</li>
+						<li class="tag">E-commerce</li>
+						<li class="tag">Automatisation</li>
+						<li class="tag">Gestion d'activité</li>
+					</ul>
+				</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== Projets ===== -->
+		<section class="section" id="projets">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Projets</p>
+					<h2>Ce que j'ai réalisé</h2>
+					<p class="muted">Projets personnels et scolaires, du plus récent au plus ancien.</p>
+				</header>
+
+				<div class="filters reveal" role="group" aria-label="Filtrer les projets">
+					<button type="button" class="filter is-active" data-filter="tous" aria-pressed="true">Tous</button>
+					<button type="button" class="filter" data-filter="site-web" aria-pressed="false">Sites web</button>
+					<button type="button" class="filter" data-filter="jeu" aria-pressed="false">Jeux</button>
+					<button type="button" class="filter" data-filter="base-de-donnees" aria-pressed="false">Bases de données</button>
+				</div>
+
+				<div class="projects-grid stagger" id="liste-projets">
+
+					<!-- Artiste du jour -->
+					<article class="project card reveal featured" id="artiste-du-jour" data-categorie="site-web">
+						<div class="project-cover cover-artiste">
+							<img src="Images-projets/artistedujour.webp" alt="Capture du site Artiste du jour" loading="lazy" onerror="this.remove()">
+							<span class="cover-icon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+							<span class="cover-title" aria-hidden="true">artistedujour.fr</span>
+							<span class="cover-sub" aria-hidden="true">Le rendez-vous musical français</span>
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span class="tag tag-new">Le plus récent</span>
+								<span>Projet personnel · Solo</span>
+								<span>Sept. 2026 · en amélioration continue</span>
+							</div>
+							<h3>Artiste du jour</h3>
+							<p>
+								Le « Wordle » de la musique francophone, que j'ai créé de A à Z. Chaque jour à minuit, un nouvel
+								artiste ou groupe (France, Belgique, Suisse ou Canada) se cache derrière le masque : à chaque
+								proposition, le joueur découvre ce qu'il a en commun avec l'artiste mystère.
+							</p>
+							<button type="button" class="more-toggle" aria-expanded="false" aria-controls="artiste-du-jour-details">Détails du projet</button>
+							<ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li><li class="tag">OVHcloud</li></ul>
+							<div class="project-actions">
+								<a href="https://artistedujour.fr" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jouer <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
 							</div>
 						</div>
-					</a>
+						<div class="more more-panel" id="artiste-du-jour-details" hidden>
+							<div>
+								<h4><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Le jeu</h4>
+								<p>
+									Chaque proposition est comparée sur <strong>9 critères</strong> (genre, pays, type, style musical,
+									âge, situation, auditeurs mensuels, followers…) avec un code couleur vert / jaune / rouge et des
+									flèches « plus haut / plus bas ». Des <strong>indices</strong> se débloquent au fil des essais :
+									carrière après 4 tentatives, chanson après 6, photo après 7.
+								</p>
+								<p>
+									Un système de <strong>points</strong> récompense la rapidité (de 20 points au premier essai
+									jusqu'à 2), chaque indice utilisé coûte des points, et un calendrier permet de rejouer les jours précédents.
+								</p>
+							</div>
+							<div>
+								<h4><i class="fa-solid fa-users" aria-hidden="true"></i> Côté joueurs</h4>
+								<p>
+									<strong>Comptes</strong> avec profil et photo, statistiques et séries, historique des parties synchronisé
+									entre appareils, <strong>classements</strong> du mois et de l'année, rappels par e-mail et notifications,
+									application installable sur l'écran d'accueil, partage « Défiez vos amis » et formulaires pour
+									suggérer un artiste, signaler une donnée erronée, un bug ou poser une question.
+								</p>
+							</div>
+							<div>
+								<h4><i class="fa-solid fa-gauge-high" aria-hidden="true"></i> Espace d'administration</h4>
+								<p>
+									J'ai aussi développé une partie <strong>administration</strong> qui me permet de suivre les
+									<strong>statistiques</strong> du site, d'alimenter le jeu en ajoutant moi-même les artistes et leurs
+									indices, et de gérer les <strong>messages des joueurs</strong> : suggestions d'artistes, signalements
+									d'erreurs et rapports de bugs.
+								</p>
+							</div>
+							<div>
+								<h4><i class="fa-solid fa-globe" aria-hidden="true"></i> Mise en ligne et référencement</h4>
+								<p>
+									Ce projet m'a permis d'apprendre à <strong>héberger un site web</strong> en production sur
+									<strong>OVHcloud</strong> (nom de domaine, déploiement, maintenance) et à gérer son
+									<strong>indexation</strong> sur les différents moteurs de recherche et plateformes pour le rendre visible.
+								</p>
+							</div>
+						</div>
+					</article>
+
+					<!-- Tag multiplayer -->
+					<article class="project card reveal" id="tag-multiplayer" data-categorie="jeu">
+						<div class="project-cover cover-tag">
+							<img src="Images-projets/tag-multiplayer.webp" alt="Capture du jeu Tag Multiplayer" loading="lazy" onerror="this.remove()">
+							<span class="cover-icon" aria-hidden="true"><i class="fa-solid fa-tv"></i> <i class="fa-solid fa-mobile-screen-button"></i></span>
+							<span class="cover-title" aria-hidden="true">Tag Multiplayer</span>
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet scolaire · Duo</span>
+								<span>Avr. – juin 2026</span>
+							</div>
+							<h3>Tag Multiplayer</h3>
+							<p>
+								Un jeu de chat (tag) multijoueur : la partie s'affiche sur un grand écran et chaque joueur
+								utilise <strong>son téléphone comme manette</strong>.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Réalisé en duo avec <strong>Adam Vignolles</strong> dans le cadre d'un projet scolaire.
+									Les joueurs se connectent depuis leur smartphone, qui devient une manette, pendant que
+									la partie se joue en direct sur un écran partagé.
+								</p>
+								<p class="small muted">
+									Le jeu est hébergé sur Render : le premier chargement peut prendre quelques secondes.
+								</p>
+							</details>
+							<ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">TypeScript</li></ul>
+							<div class="project-actions">
+								<a href="https://tag-multiplayer-8tqq.onrender.com/game" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jouer <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Supercell Gift -->
+					<article class="project card reveal" id="supercell-gift" data-categorie="site-web">
+						<div class="project-cover">
+							<img src="Images-projets/supercell-gift.webp" alt="Capture du site Supercell Gift" loading="lazy">
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet personnel · Solo</span>
+								<span>Oct. 2025</span>
+							</div>
+							<h3>Supercell Gift</h3>
+							<p>
+								Un site qui regroupe les récompenses offertes sur Clash Royale, Brawl Stars et Clash of Clans,
+								pour les partager facilement avec mes clans.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Plutôt que d'envoyer les liens à chacun, il me suffit de les ajouter sur le site.
+									Les récompenses expirées sont automatiquement grisées.
+								</p>
+								<p>
+									<strong>Pistes d'amélioration :</strong> un filtre pour n'afficher que les récompenses
+									actives, et une base de données pour notifier par e-mail à chaque ajout.
+								</p>
+							</details>
+							<ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+							<div class="project-actions">
+								<a href="https://ilanbs14.github.io/supercell-gift" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Voir le site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Démineur -->
+					<article class="project card reveal" id="demineur" data-categorie="jeu">
+						<div class="project-cover">
+							<img src="Images-projets/demineur.webp" alt="Capture du jeu du démineur" loading="lazy">
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet scolaire · Solo</span>
+								<span>Mai 2025</span>
+							</div>
+							<h3>Jeu du démineur</h3>
+							<p>
+								Un démineur personnalisé en C# / XAML : niveaux de difficulté, grille sur mesure,
+								chronomètre, pause et meilleurs scores.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Trois semaines de projet sur un langage que je découvrais. La révélation des cases vides
+									repose sur une fonction récursive.
+								</p>
+								<p>
+									J'ai ajouté des couleurs selon le nombre de bombes voisines, quatre niveaux (facile à extrême),
+									la personnalisation du nombre de cases et de bombes, un compteur de cases/bombes restantes,
+									un bouton pause/play, un bouton de relance, un chronomètre, les meilleurs scores par niveau
+									et un système de drapeaux au clic droit.
+								</p>
+								<p><strong>Note obtenue :</strong> 4/4</p>
+								<p class="small muted">
+									Pour y jouer : récupérer le projet sur GitHub et l'ouvrir avec
+									<a href="https://visualstudio.microsoft.com/fr/vs/" target="_blank" rel="noopener">Visual Studio</a>.
+								</p>
+							</details>
+							<ul class="tags"><li class="tag">C#</li><li class="tag">XAML</li><li class="tag">Visual Studio</li></ul>
+							<div class="project-actions">
+								<a href="https://github.com/ilanbs14/demineur" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Jeu 2D -->
+					<article class="project card reveal" id="projet-jeu" data-categorie="jeu">
+						<div class="project-cover">
+							<img src="Images-projets/jeu2d.webp" alt="Capture du jeu 2D en C++" loading="lazy">
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet scolaire · Duo</span>
+								<span>Déc. 2024</span>
+							</div>
+							<h3>Jeu en 2D</h3>
+							<p>
+								Un jeu de plateforme 2D en C++ avec personnages, ennemis, collisions et trois niveaux.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Réalisé en duo avec <strong>Joel Jorge</strong>. Six classes structurent le jeu
+									(<em>dictionnaire, image, niveau, objet, personnage, tuile</em>) et nous avons créé trois
+									niveaux, soit deux de plus que demandé.
+								</p>
+								<p>
+									Certains ennemis se déplacent de façon régulière, d'autres poursuivent le joueur.
+									Ramasser toutes les pièces déverrouille la porte du niveau suivant. Ce projet nous a montré
+									l'importance des mathématiques dans les jeux.
+								</p>
+								<p><strong>Note obtenue :</strong> 8,75/10</p>
+							</details>
+							<ul class="tags"><li class="tag">C++</li><li class="tag">Code::Blocks</li></ul>
+							<div class="project-actions">
+								<a href="https://github.com/ilanbs14/jeu-2d" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Parc d'attraction -->
+					<article class="project card reveal" id="projet-parc" data-categorie="site-web">
+						<div class="project-cover">
+							<img src="Images-projets/parc-attraction.webp" alt="Capture du site Saiyan Land" loading="lazy">
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet scolaire · Duo</span>
+								<span>Déc. 2024</span>
+							</div>
+							<h3>Saiyan Land</h3>
+							<p>
+								Le site fictif d'un parc d'attraction inspiré de l'univers Dragon Ball, sur quatre pages.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Réalisé en duo avec <strong>Mohamed Ben Taleb</strong>. Le site comporte quatre pages
+									(Accueil, Services, Tarifs, Map), chacune avec une barre de navigation, un bouton de
+									réservation et un footer.
+								</p>
+								<p>
+									Je me suis occupé de la page « Activités » et du footer : textes, images, tableaux et
+									animations au survol. Nous avons aussi intégré des vidéos et des cartes.
+								</p>
+								<p><strong>Note obtenue :</strong> 16/20</p>
+							</details>
+							<ul class="tags"><li class="tag">HTML</li><li class="tag">CSS</li></ul>
+							<div class="project-actions">
+								<a href="https://ilanbs14.github.io/parc-attraction-web/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Voir le site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</article>
+
+					<!-- BDD Banque -->
+					<article class="project card reveal" id="projet-banque" data-categorie="base-de-donnees">
+						<div class="project-cover">
+							<img src="Images-projets/bdd-banque.png" alt="Schéma de la base de données bancaire" loading="lazy">
+						</div>
+						<div class="project-body">
+							<div class="project-meta">
+								<span>Projet scolaire · Duo</span>
+								<span>Nov. 2024</span>
+							</div>
+							<h3>Base de données bancaire</h3>
+							<p>
+								La conception complète d'une base de données pour une banque, du besoin client jusqu'aux requêtes SQL.
+							</p>
+							<details class="more">
+								<summary>Détails du projet</summary>
+								<p>
+									Réalisé en duo avec <strong>Abdelmoumen Hannachi</strong>. Nous avons produit le MCD,
+									le schéma relationnel et le dictionnaire des données, puis créé les tables (Ville, Agence,
+									Compte, Carte bancaire, Client, Transactions…).
+								</p>
+								<p>
+									Nous avons inséré des données fictives (25 clients, 70 transactions…) et écrit 20 requêtes réalistes.
+								</p>
+								<p><strong>Note obtenue :</strong> 15/20</p>
+							</details>
+							<ul class="tags"><li class="tag">SQL</li><li class="tag">SQLite</li><li class="tag">Looping</li><li class="tag">Mocodo</li></ul>
+							<div class="project-actions">
+								<a href="https://github.com/Ilanbs14/BDD-Banque" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><i class="fa-brands fa-github" aria-hidden="true"></i> Voir le SQL</a>
+							</div>
+						</div>
+					</article>
+
 				</div>
-			</section>
-			
+			</div>
 		</section>
 
-		<section class="barre-nav">
-			<div class="nav-pages">
-				<ul>
-					<li>
-						<a href="./" class="pageActuelle">
-							<i class="fa-solid fa-home fa-2x" ></i>
-							<p>Accueil</p>
-						</a>
+		<!-- ===== Compétences ===== -->
+		<section class="section" id="competences">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Compétences</p>
+					<h2>Mes outils au quotidien</h2>
+					<div class="legend">
+						<span><i class="dot dot-mastered" aria-hidden="true"></i> Maîtrisé</span>
+						<span><i class="dot dot-learning" aria-hidden="true"></i> En progression</span>
+					</div>
+				</header>
+
+				<div class="skills-grid stagger">
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-cloud" aria-hidden="true"></i> Salesforce</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/salesforce.webp" alt="">Salesforce</li>
+							<li class="skill mastered"><i class="fa-solid fa-code" aria-hidden="true"></i>Apex</li>
+							<li class="skill mastered"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>SOQL</li>
+							<li class="skill mastered"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>SOSL</li>
+							<li class="skill mastered"><i class="fa-solid fa-bolt" aria-hidden="true"></i>Lightning Web Components</li>						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-display" aria-hidden="true"></i> Front-end</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/html-5.webp" alt="">HTML</li>
+							<li class="skill mastered"><img src="Images-general/css-3.webp" alt="">CSS</li>
+							<li class="skill learning"><img src="Images-general/js.webp" alt="">JavaScript</li>
+							<li class="skill learning"><i class="fa-solid fa-code" aria-hidden="true"></i>TypeScript</li>
+						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-server" aria-hidden="true"></i> Langages</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/python.webp" alt="">Python</li>
+							<li class="skill mastered"><img src="Images-general/c++.webp" alt="">C++</li>
+							<li class="skill learning"><img src="Images-general/java.webp" alt="">Java</li>
+							<li class="skill learning"><img src="Images-general/c-sharp.webp" alt="">C#</li>
+							<li class="skill learning"><img src="Images-general/xaml.webp" alt="">XAML</li>
+						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-database" aria-hidden="true"></i> Données</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/sql.webp" alt="">SQL</li>
+							<li class="skill mastered"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Wikidata</li>
+							<li class="skill learning"><img src="Images-general/oracle.webp" alt="">Oracle</li>
+						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-people-group" aria-hidden="true"></i> Méthodes</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>Méthodes agiles</li>
+							<li class="skill mastered"><i class="fa-solid fa-users" aria-hidden="true"></i>Scrum</li>
+							<li class="skill learning"><img src="Images-general/git.webp" alt="">Git</li>
+							<li class="skill mastered"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</li>
+						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Outils</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/visualstudio.webp" alt="">Visual Studio</li>
+							<li class="skill mastered"><img src="Images-general/eclipse.webp" alt="">Eclipse</li>
+							<li class="skill mastered"><img src="Images-general/codeblocks.webp" alt="">Code::Blocks</li>
+							<li class="skill mastered"><img src="Images-general/jupyter.webp" alt="">Jupyter</li>
+							<li class="skill mastered"><img src="Images-general/vp.webp" alt="">Visual Paradigm</li>
+							<li class="skill mastered"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>Outils d'IA</li>
+						</ul>
+					</div>
+
+					<div class="card skill-group reveal">
+						<h3><i class="fa-solid fa-language" aria-hidden="true"></i> Langues</h3>
+						<ul class="skills stagger" data-reveal="zoom">
+							<li class="skill mastered"><img src="Images-general/français.webp" alt="">Français <small>natif</small></li>
+							<li class="skill learning"><img src="Images-general/anglais.webp" alt="">Anglais <small>B1/B2</small></li>
+							<li class="skill learning"><img src="Images-general/espagnol.webp" alt="">Espagnol <small>B1</small></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== Parcours ===== -->
+		<section class="section" id="parcours">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">Parcours</p>
+					<h2>Ma formation</h2>
+				</header>
+
+				<ol class="timeline stagger" data-reveal="left">
+					<li class="timeline-item current reveal">
+						<span class="timeline-date">2026 — 2027</span>
+						<h3>BUT 3 Informatique <span class="tag tag-live">En cours</span></h3>
+						<p class="muted">IUT d'Orsay · 2<sup>e</sup> année d'alternance chez AG2R LA MONDIALE</p>
 					</li>
-					<li>
-						<a href="./projets.html">
-							<i class="fa-solid fa-folder fa-2x" aria-hidden="true"></i>
-							<p>Projets</p>
-						</a>
+					<li class="timeline-item reveal">
+						<span class="timeline-date">2025 — 2026</span>
+						<h3>BUT 2 Informatique</h3>
+						<p class="muted">IUT d'Orsay · Début de l'alternance chez AG2R LA MONDIALE</p>
 					</li>
-					<li>
-						<a href="./a-propos.html">
-							<i class="fa fa-user fa-2x" aria-hidden="true"></i>
-							<p> A propos </p>
-						</a>
-					<li>
-						<a href="./competences.html">
-							<i class="fa-solid fa-code fa-2x" aria-hidden="true"></i>
-							<p>Compétences</p>
-						</a>
+					<li class="timeline-item reveal">
+						<span class="timeline-date">2024 — 2025</span>
+						<h3>BUT 1 Informatique</h3>
+						<p class="muted">IUT d'Orsay</p>
 					</li>
-				</ul>
+					<li class="timeline-item reveal">
+						<span class="timeline-date">2021 — 2024</span>
+						<h3>Baccalauréat général, mention Bien</h3>
+						<p class="muted">Spécialités Mathématiques et NSI</p>
+					</li>
+					<li class="timeline-item reveal">
+						<span class="timeline-date">2017 — 2021</span>
+						<h3>Brevet des collèges, mention Très Bien</h3>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ===== À propos ===== -->
+		<section class="section" id="a-propos">
+			<div class="container">
+				<header class="section-head reveal">
+					<p class="eyebrow">À propos</p>
+					<h2>Qui suis-je ?</h2>
+				</header>
+
+				<div class="about">
+					<div class="about-text reveal" data-reveal="left">
+						<p>
+							Curieux et motivé, j'aime explorer les différentes facettes de l'informatique : la conception
+							d'interfaces intuitives comme l'architecture d'applications performantes.
+						</p>
+						<p>
+							Mon alternance m'a fait découvrir le développement sur <strong>Salesforce</strong> et le travail en
+							<strong>équipe Scrum</strong>, tandis que mes projets personnels, comme
+							<a href="https://artistedujour.fr" target="_blank" rel="noopener">artistedujour.fr</a>, me permettent
+							d'aller au bout de mes idées, du <strong>front-end</strong> au <strong>back-end</strong>.
+						</p>
+						<p>
+							Je suis attentif à la qualité du code, à l'accessibilité et à l'esthétique des interfaces, et je
+							considère l'apprentissage continu comme la clé de mon parcours. Mon objectif : devenir un développeur
+							polyvalent, créatif et rigoureux, qui conçoit des projets qui ont du sens.
+						</p>
+
+						<div class="interests stagger">
+							<div class="interest card">
+								<span class="interest-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span>
+								<div>
+									<h3>Sport</h3>
+									<p>7 ans de <strong>gymnastique</strong>, du <strong>parkour</strong> depuis 3 ans, et un faible pour les parcs d'attractions.</p>
+								</div>
+							</div>
+							<div class="interest card">
+								<span class="interest-icon"><i class="fa-solid fa-music" aria-hidden="true"></i></span>
+								<div>
+									<h3>Musique</h3>
+									<p>Pianiste <strong>autodidacte</strong>. C'est peut-être ce goût du clavier qui m'a amené au développement :)</p>
+								</div>
+							</div>
+							<div class="interest card">
+								<span class="interest-icon"><i class="fa-solid fa-gamepad" aria-hidden="true"></i></span>
+								<div>
+									<h3>Jeux vidéo</h3>
+									<p>Surtout des jeux <strong>multijoueurs</strong> sur mobile et PS4, où se mêlent stratégie, réactivité et esprit d'équipe.</p>
+								</div>
+							</div>
+							<div class="interest card">
+								<span class="interest-icon"><i class="fa-solid fa-plane" aria-hidden="true"></i></span>
+								<div>
+									<h3>Voyages</h3>
+									<p>Grâce à mes parents, j'ai beaucoup voyagé depuis l'enfance : <strong>une dizaine de pays d'Europe</strong>, mais aussi le Cap-Vert, l'île Maurice et la Martinique.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<figure class="starter-pack card reveal" data-reveal="right">
+						<img src="./Images-a-propos/starter-pack.webp" alt="Mon starter pack illustré" loading="lazy" width="864" height="1306">
+						<figcaption>Mon starter pack</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== Contact ===== -->
+		<section class="section" id="contact">
+			<div class="container">
+				<div class="contact card reveal">
+					<div class="contact-intro">
+						<p class="eyebrow">Contact</p>
+						<h2>Envie d'échanger ?</h2>
+						<p class="muted">Une question, un projet ou simplement envie de discuter ? N'hésitez pas à me contacter.</p>
+						<a href="./CV_Ilan_LUIS.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+							<i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Télécharger mon CV
+						</a>
+					</div>
+
+					<ul class="contact-list stagger" data-reveal="right">
+						<li>
+							<a href="mailto:luisilonald14@gmail.com" class="contact-item">
+								<span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+								<span><small>E-mail</small>luisilonald14@gmail.com</span>
+							</a>
+							<button type="button" class="icon-btn copy-btn" data-copy="luisilonald14@gmail.com" aria-label="Copier l'adresse e-mail"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+						</li>
+						<li>
+							<a href="tel:+33767278718" class="contact-item">
+								<span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+								<span><small>Téléphone</small>07 67 27 87 18</span>
+							</a>
+							<button type="button" class="icon-btn copy-btn" data-copy="07 67 27 87 18" aria-label="Copier le numéro de téléphone"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/ilan-luis/" target="_blank" rel="noopener" class="contact-item">
+								<span class="contact-icon"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+								<span><small>LinkedIn</small>linkedin.com/in/ilan-luis</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/Ilanbs14" target="_blank" rel="noopener" class="contact-item">
+								<span class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+								<span><small>GitHub</small>github.com/Ilanbs14</span>
+							</a>
+						</li>
+					</ul>
+
+					<form class="contact-form" id="contact-form" novalidate>
+						<h3>Ou écrivez-moi directement</h3>
+						<div class="form-row">
+							<div class="field">
+								<label for="cf-nom">Nom et prénom</label>
+								<input type="text" id="cf-nom" name="nom" autocomplete="name" required minlength="2" placeholder="Jean Dupont">
+							</div>
+							<div class="field">
+								<label for="cf-email">E-mail</label>
+								<input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="jean.dupont@exemple.fr">
+							</div>
+						</div>
+						<div class="field">
+							<label for="cf-sujet">Sujet <span class="muted">(facultatif)</span></label>
+							<input type="text" id="cf-sujet" name="sujet" placeholder="Proposition, question, projet…">
+						</div>
+						<div class="field">
+							<label for="cf-message">Message</label>
+							<textarea id="cf-message" name="message" rows="5" required minlength="10" placeholder="Bonjour Ilan, …"></textarea>
+						</div>
+
+						<!-- Champs FormSubmit -->
+						<input type="hidden" name="_subject" value="Portfolio — nouveau message de contact">
+						<input type="hidden" name="_template" value="table">
+						<input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+						<div class="form-footer">
+							<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+							<button type="submit" class="btn btn-primary">
+								<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Envoyer le message
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
-	
-	<div id="notificationAjout" class="notificationAjout" style="display: none;">
-		Citation envoyée avec succès !
-	</div>
 
-	<div id="notificationInterdit" class="notificationInterdit" style="display: none;">
-		Une citation à déjà été envoyée !
-	</div>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<blockquote class="quote">
+				<i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+				<span id="citation-du-jour"></span>
+			</blockquote>
+			<p class="muted small">&copy; 2026 Ilan Luis — Dernière mise à jour : octobre 2026</p>
+		</div>
+	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-	<script src="./javascript/particles-config.js"></script>
-	<script src="./javascript/adapt-text.js"></script>
-	<script src="./javascript/toogle-menu.js"></script>
-	<script src="./javascript/citations.js"></script>
-	<script src="./javascript/imageSecurisee.js"></script>
-	<script src="./javascript/protectCode.js"></script>
-	<script src="./javascript/data-copy.js"></script>
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+	<script src="./javascript/main.js"></script>
 </body>
-
-<footer>
-	<div class="footer-simple">
-		<p>&copy; 2026 Ilan Luis — Portfolio personnel</p>
-		<p class="footer-date">Dernière mise à jour : 25 février 2026</p>
-	</div>
-</footer>
-
 </html>
-
