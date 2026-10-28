@@ -231,7 +231,7 @@ contactForm.addEventListener('submit', function (event) {
 
 	const bouton = contactForm.querySelector('button[type="submit"]');
 	bouton.disabled = true;
-	setStatus('Envoi en cours…');
+	setStatus('Envoi en cours… ça peut prendre plusieurs secondes');
 
 	// Récupérer les données du formulaire
 	const formData = new FormData(event.target);
