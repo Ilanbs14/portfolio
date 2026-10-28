@@ -209,12 +209,19 @@ contactForm.addEventListener('input', e => {
 	e.target.closest('.field')?.classList.remove('invalid');
 });
 
-contactForm.addEventListener('submit', async e => {
-	e.preventDefault();
+// Mise en forme de la saisie, comme pour l'ancien formulaire de citation
+document.getElementById('nom').addEventListener('input', function () {
+	this.value = this.value.toUpperCase();
+});
+document.getElementById('prenom').addEventListener('input', function () {
+	this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1).toLowerCase();
+});
+
+contactForm.addEventListener('submit', function (event) {
+	event.preventDefault();
 
 	// Validation : on signale chaque champ invalide
-	const invalides = [...contactForm.querySelectorAll('input[required], textarea[required]')]
-		.filter(champ => !champ.checkValidity());
+	const invalides = [...contactForm.querySelectorAll('[required]')].filter(champ => !champ.checkValidity());
 	invalides.forEach(champ => champ.closest('.field').classList.add('invalid'));
 	if (invalides.length) {
 		setStatus('Merci de vérifier les champs en rouge.', 'error');
@@ -226,24 +233,34 @@ contactForm.addEventListener('submit', async e => {
 	bouton.disabled = true;
 	setStatus('Envoi en cours…');
 
-	try {
-		const response = await fetch('https://formsubmit.co/ajax/luisilonald14@gmail.com', {
-			method: 'POST',
-			headers: { 'Accept': 'application/json' },
-			body: new FormData(contactForm)
-		});
-		const data = await response.json();
-		if (!response.ok || String(data.success) !== 'true') throw new Error(data.message);
+	// Récupérer les données du formulaire
+	const formData = new FormData(event.target);
 
-		contactForm.reset();
-		setStatus('Message envoyé, merci ! Je vous répondrai rapidement.', 'success');
-		showToast('Message envoyé !');
-	} catch (err) {
-		console.error('FormSubmit :', err);
-		setStatus("L'envoi a échoué. Vous pouvez m'écrire directement par e-mail.", 'error');
-	} finally {
+	fetch("https://formsubmit.co/ajax/luisilonald14@gmail.com", {
+		method: "POST",
+		body: formData,
+		headers: {
+			"Accept": "application/json"
+		}
+	})
+	.then(response => response.json())
+	.then(data => {
+		console.log("Réponse FormSubmit:", data);
+		if (data.success === "true") {
+			event.target.reset();
+			setStatus('Message envoyé, merci ! Je vous répondrai rapidement.', 'success');
+			showToast('Message envoyé !');
+		} else {
+			setStatus("Erreur lors de l'envoi : " + data.message, 'error');
+		}
+	})
+	.catch(error => {
+		console.error("Erreur:", error);
+		setStatus("Une erreur est survenue. Vous pouvez m'écrire directement par e-mail.", 'error');
+	})
+	.finally(() => {
 		bouton.disabled = false;
-	}
+	});
 });
 
 
